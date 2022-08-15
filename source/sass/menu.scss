@@ -1,0 +1,19 @@
+.menu-mobile--hidden {
+  display: none;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 56px;
+  height: 56px;
+
+  border: 0;
+  background-color: transparent;
+
+  & img {
+    margin-right: 5px;
+  }
+}

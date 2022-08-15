@@ -1,0 +1,133 @@
+.slider {
+  margin-bottom: 27px;
+}
+
+.slider__background {
+  background: url("../img/back-mobile.jpg");
+  height: 158px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: bottom;
+}
+
+.slider__text {
+  margin-bottom: 10px;
+}
+
+.slider .preview__p {
+  margin-top: 7.5px;
+}
+
+.gallery__item {
+  padding: 25px 20px;
+  border-top: 1px solid var(--button-disable);
+
+  &:last-child {
+    border-bottom: 1px solid var(--button-disable);
+  }
+}
+
+.gallery .item__link {
+  font-family: "PT Sans bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  mix-blend-mode: normal;
+}
+
+.gallery .item__author {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  mix-blend-mode: normal;
+
+  margin: 0 0 15px 0;
+}
+
+.gallery .item__content {
+  margin-top: 10px;
+}
+
+.gallery .item__like {
+  display: flex;
+  align-items: flex-end;
+
+  & p {
+    margin: 0;
+    margin-left: 14px;
+
+    font-weight: 600;
+  }
+}
+
+.video-presentation .preview__title {
+  margin-top: 24px;
+}
+
+.video-presentation .preview__p {
+  margin-top: 7.5px;
+  margin-bottom: 45px;
+}
+
+.videoplayer {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: url("../img/play.svg") no-repeat 100% 100%;
+    top: 35%;
+    left: 45%;
+    width: 46px;
+    height: 56px;
+    z-index: 30;
+    cursor: pointer;
+  }
+
+  & img {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.player img {
+    display: none;
+  }
+
+  &.player::after {
+    display: none;
+  }
+}

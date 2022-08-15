@@ -36,13 +36,13 @@
 
   background: var(--white-color);
   mask-image: url("../img/left-section.svg");
-  -webkit-mask-image: url("../img/left-section.svg");
+  // -webkit-mask-image: url("../img/left-section.svg");
   mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
+  // -webkit-mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-position: center;
+  // -webkit-mask-position: center;
   mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
+  // -webkit-mask-size: 100% 100%;
 }
 
 .triangle__right-section {
@@ -51,13 +51,13 @@
 
   background: var(--white-color);
   mask-image: url("../img/right-section.svg");
-  -webkit-mask-image: url("../img/right-section.svg");
+  // -webkit-mask-image: url("../img/right-section.svg");
   mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
+  // -webkit-mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-position: center;
+  // -webkit-mask-position: center;
   mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
+  // -webkit-mask-size: 100% 100%;
 }
 
 

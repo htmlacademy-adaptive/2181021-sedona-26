@@ -1,0 +1,108 @@
+.intro {
+  margin-bottom: 53px;
+}
+
+.intro__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 389px;
+
+  background: url("../img/slider-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: normal;
+}
+
+.triangle {
+  position: relative;
+  display: flex;
+  top: -56px;
+  height: 57px;
+  margin-bottom: -56px;
+
+  &--blue {
+    & .triangle__left-section,
+    & .triangle__right-section {
+      background: var(--blue-color);
+    }
+  }
+}
+
+.triangle__left-section {
+  height: 100%;
+  width: 50%;
+
+  background: var(--white-color);
+  mask-image: url("../img/left-section.svg");
+  -webkit-mask-image: url("../img/left-section.svg");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+.triangle__right-section {
+  height: 100%;
+  width: 50%;
+
+  background: var(--white-color);
+  mask-image: url("../img/right-section.svg");
+  -webkit-mask-image: url("../img/right-section.svg");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview__title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+
+  font-family: "PT Sans bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+
+  color: #000000;
+
+  margin-bottom: calc(35px / 2);
+  margin-top: 32px;
+  padding: 0 10px;
+}
+
+.preview__p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+
+  color: #333333;
+
+  margin-top: calc(35px / 2);
+}

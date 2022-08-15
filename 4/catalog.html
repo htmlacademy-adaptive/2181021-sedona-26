@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>HTML Academy: Седона</title>
+    <base href="https://htmlacademy-adaptive.github.io/2181021-sedona-26/4/">
+</head>
+  <body>
+    <header class="header">
+      <div class="header__logo logo">
+        <a href="/" class="logo__link">
+          <img src="img/logo.svg" alt="Логотип">
+        </a>
+      </div>
+      <button class="menu-toggle">
+        <img src="img/icon-menu.svg" alt="menu">
+      </button>
+      <nav class="menu-mobile menu-mobile--hidden">
+        <ul class="menu-mobile__list">
+          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Главная</a></li>
+          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Фото и видео</a></li>
+          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Форма отзыва</a></li>
+          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">HTML ACADEMY</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="slider">
+        <div class="slider__background">
+          <img src="img/SEDONA.svg" class="slider__text">
+        </div>
+        <div class="triangle">
+          <img src="img/left-section.svg" class="triangle__left-section">
+          <img src="img/right-section.svg" class="triangle__right-section">
+        </div>
+        <div class="preview container">
+          <h1 class="preview__title title">Фото и видео</h1>
+          <p class="preview__p">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="gallery__item item">
+          <div class="item__body">
+            <img src="img/photo-1-mobile.jpg" alt="неродные просторы" class="item__image">
+            <div class="item__content">
+              <a href="#" class="item__link">Неродные просторы</a>
+              <p class="item__author">Автор фото: Борис</p>
+              <div class="item__like">
+                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <p>1350</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__item item">
+          <div class="item__body">
+            <img src="img/photo-2-mobile.jpg" alt="Местная растительность" class="item__image">
+            <div class="item__content">
+              <a href="#" class="item__link">Местная растительность</a>
+              <p class="item__author">Автор фото: Сергей</p>
+              <div class="item__like">
+                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <p>143</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__item item">
+          <div class="item__body">
+            <img src="img/photo-3-mobile.jpg" alt="Дорога на север" class="item__image">
+            <div class="item__content">
+              <a href="#" class="item__link">Дорога на север</a>
+              <p class="item__author">Автор фото: Петр</p>
+              <div class="item__like">
+                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <p>96</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__item item">
+          <div class="item__body">
+            <img src="img/photo-4-desktop 1.jpg" alt="Мост дьявола" class="item__image">
+            <div class="item__content">
+              <a href="#" class="item__link">Мост дьявола</a>
+              <p class="item__author">Автор фото: Антон</p>
+              <div class="item__like">
+                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <p>234</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="video-presentation  container">
+        <div class="preview">
+          <h1 class="preview__title title">Все еще сомневаетесь?</h1>
+          <p class="preview__p">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+        <div class="videoplayer">
+          <img src="img/video-mobile.jpg" alt="video">
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-pjw1_GucsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__body">
+        <div class="footer__hashtag">
+          <span class="hashtag">#visitSEDONA</span>
+        </div>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://vk.com" class="social__link">
+                <img src="img/vk.svg" alt="vk" class="social__icon">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link">
+                <img src="img/telegram.svg" alt="telegram" class="social__icon">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link">
+                <img src="img/youtube.svg" alt="youtube" class="social__icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__developer">
+          <p>РАЗРАБОТАНО</p><img src="img/htmlacademy.svg" alt="HTML ACADEMY" width="50" height="50">
+        </div>
+      </div>
+    </footer>
+    <script>
+        $(function() {
+          var videos  = $(".videoplayer");
+
+              videos.on("click", function(){
+                  var elm = $(this),
+                      conts   = elm.contents(),
+                      le      = conts.length,
+                      ifr     = null;
+
+                  for(var i = 0; i<le; i++){
+                    if(conts[i].nodeType == 8) ifr = conts[i].textContent;
+                  }
+
+                  elm.addClass("player").html(ifr);
+                  elm.off("click");
+              });
+      });
+    </script>
+  </body>
+</html>

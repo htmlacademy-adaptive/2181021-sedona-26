@@ -9,22 +9,31 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo logo">
-        <a href="/" class="logo__link">
-          <img src="img/logo.svg" alt="Логотип">
-        </a>
+      <div class="menu">
+        <div class="header__logo logo">
+          <a href="/" class="logo__link">
+            <img src="img/logo.svg" alt="Логотип">
+          </a>
+        </div>
+        <div class="menu__item menu__item--home"><a href="/" class="menu__link">Главная</a></div>
+        <div class="menu__item menu__item--catalog"><a href="catalog.html" class="menu__link menu__link--current">Фото и видео</a></div>
+        <div class="menu__item menu__item--form"><a href="form.html" class="menu__link">Форма отзыва</a></div>
+        <div class="menu__item menu__item--htmlacademy"><a href="https://htmlacademy.ru" class="menu__link">HTML ACADEMY</a></div>
       </div>
-      <button class="menu-toggle">
-        <img src="img/icon-menu.svg" alt="menu">
-      </button>
-      <nav class="menu-mobile menu-mobile--hidden">
+      <div class="menu-mobile">
+        <input type="checkbox" id="menu-button" class="menu-mobile__list--ticker">
+        <label class="menu-mobile__icon" for="menu-button">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </label>
         <ul class="menu-mobile__list">
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Главная</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Фото и видео</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Форма отзыва</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">HTML ACADEMY</a></li>
+          <li class="menu-mobile__item"><a href="/" class="menu-mobile__link">Главная</a></li>
+          <li class="menu-mobile__item"><a href="catalog.html" class="menu-mobile__link">Фото и видео</a></li>
+          <li class="menu-mobile__item"><a href="form.html" class="menu-mobile__link">Форма отзыва</a></li>
+          <li class="menu-mobile__item"><a href="https://htmlacademy.ru" class="menu-mobile__link">HTML ACADEMY</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
     <main class="main">
       <section class="slider">
@@ -32,62 +41,78 @@
           <img src="img/SEDONA.svg" class="slider__text">
         </div>
         <div class="triangle">
-          <img src="img/left-section.svg" class="triangle__left-section">
-          <img src="img/right-section.svg" class="triangle__right-section">
+          <div class="triangle__left-section"></div>
+          <div class="triangle__right-section"></div>
         </div>
         <div class="preview container">
           <h1 class="preview__title title">Фото и видео</h1>
           <p class="preview__p">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         </div>
       </section>
-      <section class="gallery">
-        <div class="gallery__item item">
+      <section class="gallery container">
+        <div class="gallery__item item gallery__item--1">
           <div class="item__body">
-            <img src="img/photo-1-mobile.jpg" alt="неродные просторы" class="item__image">
+            <div class="item__image">
+              <img src="img/photo-1-desktop.jpg" alt="неродные просторы">
+            </div>
             <div class="item__content">
-              <a href="#" class="item__link">Неродные просторы</a>
-              <p class="item__author">Автор фото: Борис</p>
+              <div class="item-wrapper">
+                <a href="#" class="item__link">Неродные просторы</a>
+                <p class="item__author">Автор фото: Борис</p>
+              </div>
               <div class="item__like">
-                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <div class="like-icon"></div>
                 <p>1350</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="gallery__item item">
+        <div class="gallery__item item gallery__item--2">
           <div class="item__body">
-            <img src="img/photo-2-mobile.jpg" alt="Местная растительность" class="item__image">
+            <div class="item__image">
+              <img src="img/photo-2-mobile.jpg" alt="Местная растительность">
+            </div>
             <div class="item__content">
-              <a href="#" class="item__link">Местная растительность</a>
-              <p class="item__author">Автор фото: Сергей</p>
+              <div class="item-wrapper">
+                <a href="#" class="item__link">Местная растительность</a>
+                <p class="item__author">Автор фото: Сергей</p>
+              </div>
               <div class="item__like">
-                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <div class="like-icon"></div>
                 <p>143</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="gallery__item item">
+        <div class="gallery__item item gallery__item--3">
           <div class="item__body">
-            <img src="img/photo-3-mobile.jpg" alt="Дорога на север" class="item__image">
+            <div class="item__image">
+              <img src="img/photo-3-mobile.jpg" alt="Дорога на север">
+            </div>
             <div class="item__content">
-              <a href="#" class="item__link">Дорога на север</a>
-              <p class="item__author">Автор фото: Петр</p>
+              <div class="item-wrapper">
+                <a href="#" class="item__link">Дорога на север</a>
+                <p class="item__author">Автор фото: Петр</p>
+              </div>
               <div class="item__like">
-                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <div class="like-icon"></div>
                 <p>96</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="gallery__item item">
+        <div class="gallery__item item gallery__item--4">
           <div class="item__body">
-            <img src="img/photo-4-desktop 1.jpg" alt="Мост дьявола" class="item__image">
+            <div class="item__image">
+              <img src="img/photo-4-desktop 1.jpg" alt="Мост дьявола">
+            </div>
             <div class="item__content">
-              <a href="#" class="item__link">Мост дьявола</a>
-              <p class="item__author">Автор фото: Антон</p>
+              <div class="item-wrapper">
+                <a href="#" class="item__link">Мост дьявола</a>
+                <p class="item__author">Автор фото: Антон</p>
+              </div>
               <div class="item__like">
-                <img src="img/like-icon.svg" alt="Like" class="like-icon">
+                <div class="like-icon"></div>
                 <p>234</p>
               </div>
             </div>
@@ -100,7 +125,7 @@
           <p class="preview__p">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
         <div class="videoplayer">
-          <img src="img/video-mobile.jpg" alt="video">
+          <div class="video" alt="video"></div>
           <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-pjw1_GucsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
       </section>
@@ -118,12 +143,12 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link">
+              <a href="https://web.telegram.org/k/" class="social__link">
                 <img src="img/telegram.svg" alt="telegram" class="social__icon">
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link">
+              <a href="https://youtube.com" class="social__link">
                 <img src="img/youtube.svg" alt="youtube" class="social__icon">
               </a>
             </li>

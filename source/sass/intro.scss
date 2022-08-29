@@ -1,5 +1,18 @@
 .intro {
   margin-bottom: 53px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+
+  & .desc {
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .intro__slider {
@@ -9,10 +22,20 @@
 
   min-height: 389px;
 
-  background: url("../img/slider-bg.jpg");
+  background: url("../img/slider-bg.png");
   background-position: center;
   background-size: cover;
   mix-blend-mode: normal;
+
+  @media (min-width: $tablet-width) {
+    min-height: 518px;
+  }
+}
+
+.intro__slider-text {
+  @media (min-width: $tablet-width) {
+    min-width: 460px;
+  }
 }
 
 .triangle {
@@ -27,6 +50,10 @@
     & .triangle__right-section {
       background: var(--blue-color);
     }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -35,14 +62,16 @@
   width: 50%;
 
   background: var(--white-color);
-  mask-image: url("../img/left-section.svg");
-  // -webkit-mask-image: url("../img/left-section.svg");
+  mask-image: url("../img/triangle-left__mob.svg");
   mask-repeat: no-repeat;
-  // -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  // -webkit-mask-position: center;
-  mask-size: 100% 100%;
-  // -webkit-mask-size: 100% 100%;
+  mask-position: bottom right;
+  mask-size: cover;
+
+  @media (min-width: $tablet-width) {
+    mask-image: url("../img/triangle-left__pc.svg");
+    mask-position: top right;
+    mask-size: cover;
+  }
 }
 
 .triangle__right-section {
@@ -50,14 +79,16 @@
   width: 50%;
 
   background: var(--white-color);
-  mask-image: url("../img/right-section.svg");
-  // -webkit-mask-image: url("../img/right-section.svg");
+  mask-image: url("../img/triangle-right__mob.svg");
   mask-repeat: no-repeat;
-  // -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  // -webkit-mask-position: center;
-  mask-size: 100% 100%;
-  // -webkit-mask-size: 100% 100%;
+  mask-position: bottom left;
+  mask-size: cover;
+
+  @media (min-width: $tablet-width) {
+    mask-image: url("../img/triangle-right__pc.svg");
+    mask-position: top left;
+    mask-size: cover;
+  }
 }
 
 
@@ -66,27 +97,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 520px;
+    margin: auto;
+  }
 }
 
 .preview__title {
   display: flex;
   align-items: center;
-  text-align: center;
-
-
-  font-family: "PT Sans bold", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  mix-blend-mode: normal;
 
   color: #000000;
 
   margin-bottom: calc(35px / 2);
   margin-top: 32px;
   padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 47px;
+  }
 }
 
 .preview__p {

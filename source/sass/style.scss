@@ -1,12 +1,13 @@
 // Начните писать стили здесь
-@use "fonts.scss";
-@use "variables.scss";
-@use "common.scss";
-@use "header.scss";
-@use "menu.scss";
-@use "intro.scss";
-@use "main-content.scss";
-@use "search-hotel.scss";
-@use "footer.scss";
-@use "catalog.scss";
-@use "form.scss";
+@import "fonts.scss";
+@import "mixin.scss";
+@import "variables.scss";
+@import "common.scss";
+@import "header.scss";
+@import "menu.scss";
+@import "intro.scss";
+@import "main-content.scss";
+@import "search-hotel.scss";
+@import "footer.scss";
+@import "catalog.scss";
+@import "form.scss";

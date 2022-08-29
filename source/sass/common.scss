@@ -5,6 +5,89 @@ body {
   padding: 0;
 }
 
+.index-page .title {
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    padding: 0 10px;
+  }
+
+
+  &--item {
+    text-align: left;
+    padding: 8px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 21px;
+    }
+  }
+
+  &--white {
+    color: var(--white-color);
+
+    @media (min-width: $desktop-width) {
+      padding: 0 30px;
+    }
+  }
+}
+
 .container {
   padding: 0 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px;
+  }
+}
+
+.title {
+  @include title();
+
+  &--index {
+    margin: 33px 0;
+    padding: 0 10px;
+
+    @media (min-width: $tablet-width) {
+      margin: 50px 0 30px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 60px 0 30px 0;
+    }
+  }
+
+  &--item {
+    text-align: left;
+    padding: 8px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 21px;
+    }
+  }
+}
+
+.desc {
+  @include p();
+
+  color: #333333;
+  margin: 8px 0 8px 8px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    margin: 0;
+  }
+
+  &--white {
+    color: var(--white-color);
+  }
+}
+
+.desc__number {
+  margin: 11px 0 10px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 12px 0 24px 0;
+  }
 }

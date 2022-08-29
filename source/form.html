@@ -8,22 +8,31 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo logo">
-        <a href="/" class="logo__link">
-          <img src="img/logo.svg" alt="Логотип">
-        </a>
+      <div class="menu">
+        <div class="header__logo logo">
+          <a href="/" class="logo__link">
+            <img src="img/logo.svg" alt="Логотип">
+          </a>
+        </div>
+        <div class="menu__item menu__item--home"><a href="/" class="menu__link">Главная</a></div>
+        <div class="menu__item menu__item--catalog"><a href="catalog.html" class="menu__link">Фото и видео</a></div>
+        <div class="menu__item menu__item--form"><a href="form.html" class="menu__link menu__link--current">Форма отзыва</a></div>
+        <div class="menu__item menu__item--htmlacademy"><a href="https://htmlacademy.ru" class="menu__link">HTML ACADEMY</a></div>
       </div>
-      <button class="menu-toggle">
-        <img src="img/icon-menu.svg" alt="menu">
-      </button>
-      <nav class="menu-mobile menu-mobile--hidden">
+      <div class="menu-mobile">
+        <input type="checkbox" id="menu-button" class="menu-mobile__list--ticker">
+        <label class="menu-mobile__icon" for="menu-button">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </label>
         <ul class="menu-mobile__list">
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Главная</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Фото и видео</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Форма отзыва</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">HTML ACADEMY</a></li>
+          <li class="menu-mobile__item"><a href="/" class="menu-mobile__link">Главная</a></li>
+          <li class="menu-mobile__item"><a href="catalog.html" class="menu-mobile__link">Фото и видео</a></li>
+          <li class="menu-mobile__item"><a href="form.html" class="menu-mobile__link">Форма отзыва</a></li>
+          <li class="menu-mobile__item"><a href="https://htmlacademy.ru" class="menu-mobile__link">HTML ACADEMY</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
     <main class="main">
       <section class="slider">
@@ -31,17 +40,17 @@
           <img src="img/SEDONA.svg" class="slider__text">
         </div>
         <div class="triangle">
-          <img src="img/left-section.svg" class="triangle__left-section">
-          <img src="img/right-section.svg" class="triangle__right-section">
+          <div class="triangle__left-section"></div>
+          <div class="triangle__right-section"></div>
         </div>
         <div class="preview container">
           <h1 class="preview__title title">Оставьте свой отзыв</h1>
-          <p class="preview__p">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="preview__p">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
         </div>
       </section>
-      <form class="form">
-        <div class="form__wrapper">
-          <div class="form__block-1 container">
+      <form class="form container">
+        <div class="form__wrapper form__wrapper--1">
+          <div class="form__block-1">
             <h2 class="form__title title">Представьтесь:</h2>
             <div class="form__section">
               <div class="input__wrapper">
@@ -59,8 +68,8 @@
             </div>
           </div>
         </div>
-        <div class="form__wrapper">
-          <div class="form__block-2 container">
+        <div class="form__wrapper form__wrapper--2">
+          <div class="form__block-2">
             <h2 class="form__title title">Контактная информация:</h2>
             <div class="form__section">
               <div class="input__wrapper">
@@ -84,12 +93,12 @@
             </div>
           </div>
         </div>
-        <div class="form__wrapper">
-          <div class="form__block-3 container">
+        <div class="form__wrapper form__wrapper--3">
+          <div class="form__block-3">
             <h2 class="form__title title">Ваше общее впечатление:</h2>
             <div class="form__section">
               <div class="radio__wrapper">
-                <input id="positive" name="impression" type="radio">
+                <input id="positive" name="impression" type="radio" checked>
                 <label class="answer" for="positive">Скорее положительное</label>
               </div>
               <div class="radio__wrapper">
@@ -103,20 +112,20 @@
             </div>
           </div>
         </div>
-        <div class="form__wrapper">
-          <div class="form__block-4 container">
+        <div class="form__wrapper form__wrapper--4">
+          <div class="form__block-4">
             <h2 class="form__title title">Посещенные достопримечательности:</h2>
             <div class="form__section">
               <div class="checkbox__wrapper">
-                <input id="devil-bridge" name="attractions" type="checkbox">
+                <input id="devil-bridge" name="attractions" type="checkbox" checked>
                 <label class="answer" for="devil-bridge">Мост Дьявола</label>
               </div>
               <div class="checkbox__wrapper">
-                <input id="mountin-bell" name="attractions" type="checkbox">
+                <input id="mountin-bell" name="attractions" type="checkbox" checked>
                 <label class="answer" for="mountin-bell">Гора-Колокол</label>
               </div>
               <div class="checkbox__wrapper">
-                <input id="slide-park" name="attractions" type="checkbox">
+                <input id="slide-park" name="attractions" type="checkbox" checked>
                 <label class="answer" for="slide-park">Слайд-парк</label>
               </div>
               <div class="checkbox__wrapper">
@@ -126,18 +135,21 @@
             </div>
           </div>
         </div>
-        <div class="form__wrapper">
-          <div class="form__block-5 container">
+        <div class="form__wrapper form__wrapper--5">
+          <div class="form__block-5">
             <h2 class="form__title title">Опишите свои эмоции:</h2>
             <div class="form__section">
               <div class="textarea__wrapper">
                 <textarea id="message" placeholder="Опишите подробно все свои восторги" type="textarea"></textarea>
-                <button class="button submit">ОТПРАВИТЬ ОТЗЫВ</button>
+                <div class="button-wrapper">
+                  <button class="button submit">ОТПРАВИТЬ ОТЗЫВ</button>
+                  <span class="required-field">* — обязательные поля</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </form>
     </main>
     <footer class="footer">
       <div class="footer__body">

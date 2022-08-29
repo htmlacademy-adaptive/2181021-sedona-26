@@ -4,29 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" async="" src="js/menu.js"></script>
-
     <title>HTML Academy: Седона</title>
 
   </head>
-  <body class="page-container">
+  <body class="index-page">
     <header class="header">
-      <div class="header__logo logo">
-        <a href="/" class="logo__link">
-          <img src="img/logo.svg" alt="Логотип">
-        </a>
+      <div class="menu">
+        <div class="header__logo logo">
+          <a href="/" class="logo__link">
+            <img src="img/logo.svg" alt="Логотип">
+          </a>
+        </div>
+        <div class="menu__item menu__item--home"><a href="/" class="menu__link menu__link--current">Главная</a></div>
+        <div class="menu__item menu__item--catalog"><a href="catalog.html" class="menu__link">Фото и видео</a></div>
+        <div class="menu__item menu__item--form"><a href="form.html" class="menu__link">Форма отзыва</a></div>
+        <div class="menu__item menu__item--htmlacademy"><a href="https://htmlacademy.ru" class="menu__link">HTML ACADEMY</a></div>
       </div>
-      <button class="menu-toggle" onclick="header_menu()">
-        <img src="img/icon-menu.svg" alt="menu">
-      </button>
-      <nav id="navigation" class="menu-mobile menu-mobile--hidden">
+      <div class="menu-mobile">
+        <input type="checkbox" id="menu-button" class="menu-mobile__list--ticker">
+        <label class="menu-mobile__icon" for="menu-button">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </label>
         <ul class="menu-mobile__list">
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Главная</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Фото и видео</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">Форма отзыва</a></li>
-          <li class="menu-mobile__item"><a href="#" class="menu-mobile__link">HTML ACADEMY</a></li>
+          <li class="menu-mobile__item"><a href="/" class="menu-mobile__link">Главная</a></li>
+          <li class="menu-mobile__item"><a href="catalog.html" class="menu-mobile__link">Фото и видео</a></li>
+          <li class="menu-mobile__item"><a href="form.html" class="menu-mobile__link">Форма отзыва</a></li>
+          <li class="menu-mobile__item"><a href="https://htmlacademy.ru" class="menu-mobile__link">HTML ACADEMY</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
     <main class="main">
       <section class="intro">
@@ -39,8 +46,8 @@
         </div>
         <div class="container">
           <div class="preview">
-            <h1 class="preview__title title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
-            <p class="preview__p">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            <h1 class="title title--index">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
+            <p class="desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
         </div>
       </section>
@@ -51,51 +58,51 @@
         </div>
         <div class="block-1">
           <div class="block-1__wrapper">
-            <div class="block-1__content container content">
-              <h3 class="content__title">НАСТОЯЩИЙ ГОРОДОК</h3>
-              <p class="content__p">— №1 —</p>
-              <p class="content__p">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+            <div class="block-1__content content">
+              <h3 class="title title--white">НАСТОЯЩИЙ ГОРОДОК</h3>
+              <p class="desc desc--white desc__number">— №1 —</p>
+              <p class="desc desc--white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <img src="img/photo-city@1x 1.png" class="main-content__image">
+            <div class="block-1__image"></div>
           </div>
           <div class="block-1__list container">
             <div class="block-1__item item">
-              <div class="item__icon icon">
+              <div class="item__icon item__icon--house">
                 <img src="img/icon-house.svg" alt="Иконка домик">
               </div>
               <div class="item__content">
-                <h3 class="item__title">Жилье</h3>
-                <p class="item__p">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                <h3 class="title title--item">Жилье</h3>
+                <p class="desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </div>
             </div>
             <div class="block-1__item item">
-              <div class="item__icon icon">
+              <div class="item__icon item__icon--burger">
                 <img src="img/icon-burger.svg" alt="Иконка гамбургер">
               </div>
               <div class="item__content">
-                <h3 class="item__title">Еда</h3>
-                <p class="item__p">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы не разочаруетесь!</p>
+                <h3 class="title title--item">Еда</h3>
+                <p class="desc">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы&nbsp;не&nbsp;разочаруетесь!</p>
               </div>
             </div>
             <div class="block-1__item item">
-              <div class="item__icon icon">
+              <div class="item__icon item__icon--gift">
                 <img src="img/icon-gift.svg" alt="Иконка подарок">
               </div>
               <div class="item__content">
-                <h3 class="item__title">Сувениры</h3>
-                <p class="item__p">Не только китайского, но и местного производства!</p>
+                <h3 class="title title--item">Сувениры</h3>
+                <p class="desc">Не только китайского, но и местного производства!</p>
               </div>
             </div>
           </div>
         </div>
         <div class="block-2">
           <div class="block-2__wrapper">
-            <div class="block-2__content container content">
-              <h3 class="content__title">ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h3>
-              <p class="content__p">— №2 —</p>
-              <p class="content__p">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            <div class="block-2__content content">
+              <h3 class="title title--white">ТАМ ЕСТЬ МОСТ&nbsp;ДЬЯВОЛА</h3>
+              <p class="desc desc--white desc__number">— №2 —</p>
+              <p class="desc desc--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img src="img/photo-bridge@1x 1.png" class="block-2__image">
+            <div class="block-2__image"></div>
           </div>
 
         </div>
@@ -103,27 +110,27 @@
           <div class="block-3">
             <div class="block-3__wrapper">
               <div class="block-3__content  content ">
-                <h3 class="content__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
-                <p class="content__p">— №3 —</p>
-                <p class="content__p">Все интересные места находятся очень близко</p>
+                <h3 class="title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+                <p class="desc desc__number">— №3 —</p>
+                <p class="desc">Все интересные места находятся очень близко</p>
               </div>
             </div>
           </div>
           <div class="block-4">
             <div class="block-4__wrapper">
               <div class="block-4__content  content">
-                <h3 class="content__title">КРАСИВАЯ ДОРОГА</h3>
-                <p class="content__p">— №4 —</p>
-                <p class="content__p">Ехать в СЕДОНУ из ЛАС-ВЕГАСА совсем не скучно!</p>
+                <h3 class="title">КРАСИВАЯ ДОРОГА</h3>
+                <p class="desc desc__number">— №4 —</p>
+                <p class="desc">Ехать в СЕДОНУ из ЛАС-&nbsp;ВЕГАСА совсем не&nbsp;скучно!</p>
               </div>
             </div>
           </div>
           <div class="block-5">
             <div class="block-5__wrapper">
               <div class="block-5__content  content">
-                <h3 class="content__title">МАЛО ТУРИСТОВ</h3>
-                <p class="content__p">— №5 —</p>
-                <p class="content__p">Большинство едет в гранд каньон и толпится там</p>
+                <h3 class="title">МАЛО ТУРИСТОВ</h3>
+                <p class="desc desc__number">— №5 —</p>
+                <p class="desc">Большинство едет в гранд каньон и толпится там</p>
               </div>
             </div>
           </div>
@@ -132,12 +139,10 @@
       <section class="search-hotel">
         <div class="search-hotel__body container">
           <h2 class="search-hotel__title">Заинтересовались?</h2>
-          <p class="search-hotel__p">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <p class="search-hotel__p">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
           <button class="button search-hotel__button">Найти гостиницу</button>
         </div>
-        <div class="search-hotel__map map">
-          <img src="img/map-mobile.png" alt="Карта" class="map__img">
-        </div>
+        <div class="search-hotel__map map"></div>
       </section>
     </main>
     <footer class="footer">

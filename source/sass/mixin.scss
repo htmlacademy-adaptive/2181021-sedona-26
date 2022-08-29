@@ -1,0 +1,72 @@
+@mixin menu__item($name) {
+  &--#{$name} {
+    grid-area: $name;
+  }
+}
+
+@mixin title {
+  font-family: "PT Sans bold", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+@mixin p {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin font-style {
+  font-style: normal;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+@mixin block-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin block-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin icon($icon-name, $icon-width, $icon-height) {
+  &--#{$icon-name} {
+    width: $icon-width;
+    height: $icon-height;
+    display: flex;
+    align-items: flex-end;
+    justify-self: center;
+  }
+}
+
+@mixin form-blocks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+

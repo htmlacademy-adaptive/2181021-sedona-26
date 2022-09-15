@@ -1,6 +1,4 @@
 .slider {
-  margin-bottom: 27px;
-
   & .preview {
     @media (min-width: $tablet-width) {
       max-width: 440px;
@@ -33,10 +31,28 @@
   }
 }
 
-.slider .preview__p {
-  margin-top: 7.5px;
+
+.catalog-page .triangle {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 2px;
+  }
 }
 
+.catalog-page .preview__p {
+  margin-bottom: 0;
+}
+
+.catalog-page .preview {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 87px;
+  }
+}
 
 .gallery {
   @media (max-width: 767px) {
@@ -229,7 +245,12 @@
 
 .video-presentation .preview {
   @media (min-width: $tablet-width) {
-    padding: 58px 100px 66px 100px;
+    padding: 58px 100px 90px 100px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 62px 100px 90px 100px;
   }
 }
 
@@ -304,6 +325,10 @@
 
   &.player::after {
     display: none;
+  }
+
+  &:hover::after {
+    opacity: 0.6;
   }
 
   @media (min-width: $tablet-width) {

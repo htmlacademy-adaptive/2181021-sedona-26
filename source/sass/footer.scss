@@ -63,6 +63,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    background: var(--button-hover);
+  }
+
+  &:active {
+    background: var(--button-active);
+
+    & img {
+      opacity: 0.3;
+    }
+  }
 }
 
 .social__item {
@@ -142,5 +154,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    font-weight: 700;
   }
 }

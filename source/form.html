@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
+  <body class="form-page">
     <header class="header">
       <div class="menu">
         <div class="header__logo logo">
@@ -22,9 +22,9 @@
       <div class="menu-mobile">
         <input type="checkbox" id="menu-button" class="menu-mobile__list--ticker">
         <label class="menu-mobile__icon" for="menu-button">
-          <span class="first"></span>
-          <span class="second"></span>
-          <span class="third"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
         </label>
         <ul class="menu-mobile__list">
           <li class="menu-mobile__item"><a href="/" class="menu-mobile__link">Главная</a></li>
@@ -39,10 +39,7 @@
         <div class="slider__background">
           <img src="img/SEDONA.svg" class="slider__text">
         </div>
-        <div class="triangle">
-          <div class="triangle__left-section"></div>
-          <div class="triangle__right-section"></div>
-        </div>
+        <div class="triangle"></div>
         <div class="preview container">
           <h1 class="preview__title title">Оставьте свой отзыв</h1>
           <p class="preview__p">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
@@ -95,7 +92,9 @@
         </div>
         <div class="form__wrapper form__wrapper--3">
           <div class="form__block-3">
-            <h2 class="form__title title">Ваше общее впечатление:</h2>
+            <div class="form__title-wrap">
+              <h2 class="form__title title">Ваше общее впечатление:</h2>
+            </div>
             <div class="form__section">
               <div class="radio__wrapper">
                 <input id="positive" name="impression" type="radio" checked>
@@ -164,19 +163,22 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link">
+              <a href="#" class="social__link">
                 <img src="img/telegram.svg" alt="telegram" class="social__icon">
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link">
+              <a href="#" class="social__link">
                 <img src="img/youtube.svg" alt="youtube" class="social__icon">
               </a>
             </li>
           </ul>
         </div>
-        <div class="footer__developer">
-          <p>РАЗРАБОТАНО</p><img src="img/htmlacademy.svg" alt="HTML ACADEMY" width="50" height="50">
+        <div class="footer__developer developer">
+          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="developer__link">
+            <p>РАЗРАБОТАНО</p>
+            <span class="developer__icon"></span>
+          </a>
         </div>
       </div>
     </footer>

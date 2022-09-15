@@ -1,3 +1,18 @@
+.form-page {
+  & .preview {
+    margin-bottom: 28px;
+  }
+
+  & .preview__p {
+    margin: 0;
+  }
+
+  & .preview__title {
+    margin-bottom: 24px;
+  }
+}
+
+
 .form {
   @media (min-width: $tablet-width) {
     display: grid;
@@ -183,6 +198,25 @@ textarea {
   background: var(--input);
   border: 0;
 
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+
+  &:hover {
+    background: var(--button-disable);
+  }
+
+  &:focus {
+    background: var(--white-color);
+    outline: 4px solid var(--input);
+    outline-offset: -4px;
+
+    & ~ .contacts-button {
+      border: 4px solid var(--input);
+      border-left: 0;
+    }
+  }
+
   &::placeholder {
     font-family: "PT Sans", sans-serif;
     font-style: normal;
@@ -193,7 +227,7 @@ textarea {
     display: flex;
     align-items: center;
 
-    color: #000000;
+    color: rgb(#000000, 30%);
 
     mix-blend-mode: normal;
 
@@ -261,7 +295,11 @@ label {
   justify-content: center;
 
   width: 58px;
-  height: 58px;
+  height: 59px;
+
+  &:hover {
+    background: #d5d5d5;
+  }
 }
 
 .contacts-button__icon--tel {
@@ -332,6 +370,10 @@ label {
 
       opacity: 0;
     }
+
+    &:hover::before {
+      background: #e5e5e5;
+    }
   }
 }
 
@@ -399,6 +441,10 @@ label {
 
       opacity: 0;
     }
+
+    &:hover::before {
+      background: #e5e5e5;
+    }
   }
 
   &:last-child {
@@ -422,6 +468,14 @@ label {
 
 .textarea__wrapper {
   margin-bottom: 40px;
+
+  & textarea {
+    margin-bottom: 56px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 48px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     padding: 0 60px;
@@ -449,6 +503,5 @@ label {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin-top: 48px;
   }
 }

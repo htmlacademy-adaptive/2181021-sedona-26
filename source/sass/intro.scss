@@ -1,14 +1,4 @@
 .intro {
-  margin-bottom: 53px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 40px;
-  }
-
   & .desc {
     margin: 0;
     text-align: center;
@@ -41,15 +31,28 @@
 .triangle {
   position: relative;
   display: flex;
-  top: -56px;
-  height: 57px;
-  margin-bottom: -56px;
+  height: 35px;
+  background: #ffffff;
+  top: -34px;
+  clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    height: 57px;
+    background: #ffffff;
+    top: -56px;
+    clip-path: polygon(50% 100%, 95% 0%, 95% 50%, 100% 40%, 100% 100%, 100% 100%, 0 100%, 0 40%, 5% 50%, 5% 0);
+  }
+
+  @media (min-width: $desktop-width) {
+    clip-path: polygon(50% 100%, 80% 0%, 80% 60%, 100% 5%, 100% 100%, 100% 100%, 0 100%, 0 5%, 20% 60%, 20% 0);
+  }
 
   &--blue {
-    & .triangle__left-section,
-    & .triangle__right-section {
-      background: var(--blue-color);
-    }
+    background: var(--blue-color);
+    height: 15px;
+    top: 1px;
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -57,37 +60,13 @@
   }
 }
 
-.triangle__left-section {
-  height: 100%;
-  width: 50%;
-
-  background: var(--white-color);
-  mask-image: url("../img/triangle-left__mob.svg");
-  mask-repeat: no-repeat;
-  mask-position: bottom right;
-  mask-size: cover;
-
+.index-page .triangle {
   @media (min-width: $tablet-width) {
-    mask-image: url("../img/triangle-left__pc.svg");
-    mask-position: top right;
-    mask-size: cover;
+    margin-bottom: -9.5px;
   }
-}
 
-.triangle__right-section {
-  height: 100%;
-  width: 50%;
-
-  background: var(--white-color);
-  mask-image: url("../img/triangle-right__mob.svg");
-  mask-repeat: no-repeat;
-  mask-position: bottom left;
-  mask-size: cover;
-
-  @media (min-width: $tablet-width) {
-    mask-image: url("../img/triangle-right__pc.svg");
-    mask-position: top left;
-    mask-size: cover;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 2px;
   }
 }
 
@@ -104,18 +83,30 @@
   }
 }
 
+.index-page .preview {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 44px;
+  }
+}
+
 .preview__title {
   display: flex;
   align-items: center;
 
   color: #000000;
 
-  margin-bottom: calc(35px / 2);
-  margin-top: 32px;
+  margin-bottom: calc(30px / 2);
+  margin-top: 0;
   padding: 0 10px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 47px;
+    // margin-top: 47px;
   }
 }
 
@@ -134,5 +125,5 @@
 
   color: #333333;
 
-  margin-top: calc(35px / 2);
+  margin-top: calc(30px / 2);
 }

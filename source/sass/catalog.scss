@@ -21,6 +21,18 @@
     background-position: center;
     background-size: cover;
   }
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-desktop@2x.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 3dppx) {
+    background: url("../img/back-desktop@3x.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .slider__text {
@@ -87,6 +99,8 @@
   width: 100%;
   overflow: hidden;
   height: 280px;
+  max-width: 280px;
+  margin: 0 auto;
 
   & img {
     width: 100%;
@@ -96,6 +110,7 @@
 
   @media (min-width: $tablet-width) {
     height: 267px;
+    max-width: 100%;
 
     & img {
       width: 100%;
@@ -291,7 +306,7 @@
   }
 
   & .video {
-    background: url("../img/video-mobile.jpg");
+    background: url("../img/catalog/video-mobile.jpg");
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -305,7 +320,19 @@
     object-fit: cover;
 
     @media (min-width: $tablet-width) {
-      background: url("../img/video-desktop.png");
+      background: url("../img/catalog/video-desktop.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
+      background: url("../img/catalog/video-desktop@2x.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (min-width: $tablet-width) and (min-resolution: 3dppx) {
+      background: url("../img/catalog/video-desktop@3x.jpg");
       background-size: cover;
       background-position: center;
     }

@@ -177,16 +177,59 @@
     }
   }
 
+
   & .block__image {
-    background: url("../img/photo-city@1x__mob.png");
+    background: url("../img/home/photo-city__mobile.jpg");
     background-position: center;
     background-size: cover;
     height: 256px;
 
-    @media (min-width: $tablet-width) {
-      background: url("../img/photo-city@1x__pc.png");
+    @media (min-resolution: 2dppx) {
+      background: url("../img/home/photo-city__mobile@2x.jpg");
       background-position: center;
       background-size: cover;
+    }
+
+    @media (min-resolution: 3dppx) {
+      background: url("../img/home/photo-city__mobile@3x.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    @media (min-width: $tablet-width) {
+      background: url("../img/home/photo-city__tablet.jpg");
+      background-position: center;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/home/photo-city__tablet@2x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (min-resolution: 3dppx) {
+        background: url("../img/home/photo-city__tablet@3x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      background: url("../img/home/photo-city__desktop.jpg");
+      background-position: center;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/home/photo-city__desktop@2x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (min-resolution: 3dppx) {
+        background: url("../img/home/photo-city__desktop@3x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
     }
   }
 }
@@ -215,18 +258,58 @@
   }
 
   & .block__image {
-    background: url("../img/photo-bridge@1x__mob.png");
+    background: url("../img/home/photo-bridge__mobile.jpg");
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     height: 256px;
 
-    @media (min-width: $tablet-width) {
-      background: url("../img/photo-bridge@1x__pc.png");
+    @media (min-resolution: 2dppx) {
+      background: url("../img/home/photo-bridge__mobile@2x.jpg");
       background-position: center;
-      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (min-resolution: 3dppx) {
+      background: url("../img/home/photo-bridge__mobile@3x.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    @media (min-width: $tablet-width) {
+      background: url("../img/home/photo-bridge__tablet.jpg");
+      background-position: center;
       background-size: cover;
       grid-row-start: 1;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/home/photo-bridge__tablet@2x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (min-resolution: 3dppx) {
+        background: url("../img/home/photo-bridge__tablet@3x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      background: url("../img/home/photo-bridge__desktop.jpg");
+      background-position: center;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/home/photo-bridge__desktop@2x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (min-resolution: 3dppx) {
+        background: url("../img/home/photo-bridge__desktop@3x.jpg");
+        background-position: center;
+        background-size: cover;
+      }
     }
   }
 }

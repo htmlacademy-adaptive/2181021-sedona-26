@@ -71,9 +71,26 @@
   &:active {
     background: var(--button-active);
 
-    & img {
+    & svg {
       opacity: 0.3;
     }
+  }
+}
+
+.social__icon {
+  &--vk {
+    width: 24px;
+    height: 14px;
+  }
+
+  &--telegram {
+    width: 22px;
+    height: 18px;
+  }
+
+  &--youtube {
+    width: 22px;
+    height: 16px;
   }
 }
 

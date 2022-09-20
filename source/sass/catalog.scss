@@ -246,14 +246,13 @@
     font-weight: 600;
   }
 
-  & .like-icon {
+  & .icon-like {
     width: 23px;
     height: 21px;
-    mask: url("../img/like-icon.svg");
-    background-color: rgb(0 0 0 / 30%);
+    fill: rgb(0 0 0 / 30%);
 
     @media (min-width: $desktop-width) {
-      background-color: var(--white-color);
+      fill: var(--white-color);
     }
   }
 }

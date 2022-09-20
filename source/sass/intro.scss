@@ -5,7 +5,7 @@
   }
 }
 
-.intro__slider {
+.intro__background {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,9 +43,16 @@
   }
 }
 
-.intro__slider-text {
+.intro__background-text {
   @media (min-width: $tablet-width) {
     min-width: 460px;
+  }
+}
+
+.intro__text-index {
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    height: 350px;
   }
 }
 

@@ -303,11 +303,13 @@ label {
 }
 
 .contacts-button__icon--tel {
-  content: url("../img/phone.svg");
+  width: 18px;
+  height: 18px;
 }
 
 .contacts-button__icon--mail {
-  content: url("../img/mail.svg");
+  width: 18px;
+  height: 16px;
 }
 
 .tel-input {

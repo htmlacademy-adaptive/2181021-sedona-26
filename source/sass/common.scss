@@ -1,3 +1,10 @@
+html {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px;
+}
+
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
@@ -55,7 +62,11 @@ button {
 
   &--index {
     margin: 0 0 35px 0;
-    padding: 0 10px;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 30px;
+    }
   }
 
   &--item {
@@ -99,6 +110,7 @@ button {
 
 .item__desc {
   margin: 8px 0 0 8px;
+
 
   @media (min-width: $tablet-width) {
     margin: 0;

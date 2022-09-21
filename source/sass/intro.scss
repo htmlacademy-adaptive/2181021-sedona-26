@@ -12,32 +12,32 @@
 
   min-height: 389px;
 
-  background: url("../img/back-mobile.jpg");
+  background: url("../img/back-mobile.webp");
   background-position: center;
   background-size: cover;
   mix-blend-mode: normal;
 
   @media (min-width: $tablet-width) {
     min-height: 518px;
-    background: url("../img/back-desktop.jpg");
+    background: url("../img/back-desktop.webp");
     background-position: center;
     background-size: cover;
   }
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/back-mobile@2x.jpg");
+    background: url("../img/back-mobile@2x.webp");
     background-position: center;
     background-size: cover;
   }
 
   @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
-    background: url("../img/back-desktop@2x.jpg");
+    background: url("../img/back-desktop@2x.webp");
     background-position: center;
     background-size: cover;
   }
 
   @media (min-width: $tablet-width) and (min-resolution: 3dppx) {
-    background: url("../img/back-desktop@3x.jpg");
+    background: url("../img/back-desktop@3x.webp");
     background-position: center;
     background-size: cover;
   }
@@ -53,6 +53,8 @@
   @media (min-width: $tablet-width) {
     width: 460px;
     height: 350px;
+    position: relative;
+    top: -6px;
   }
 }
 
@@ -62,7 +64,7 @@
   height: 35px;
   background: #ffffff;
   top: -34px;
-  clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 100%, 100% 20%, 100% 100%, 0 100%, 0% 20%);
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -70,7 +72,7 @@
     height: 57px;
     background: #ffffff;
     top: -56px;
-    clip-path: polygon(50% 100%, 95% 0%, 95% 50%, 100% 40%, 100% 100%, 100% 100%, 0 100%, 0 40%, 5% 50%, 5% 0);
+    clip-path: polygon(50% 100%, 95.5% 0, 95.5% 40%, 100% 35%, 100% 100%, 100% 100%, 0 100%, 0 35%, 4.5% 40%, 4.5% 0);
   }
 
   @media (min-width: $desktop-width) {

@@ -7,7 +7,7 @@
 }
 
 .slider__background {
-  background: url("../img/back-mobile.jpg");
+  background: url("../img/back-mobile.webp");
   height: 158px;
   display: flex;
   align-items: center;
@@ -16,20 +16,20 @@
   background-size: cover;
 
   @media (min-width: $tablet-width) {
-    background: url("../img/back-desktop.jpg");
+    background: url("../img/back-desktop.webp");
     height: 290px;
     background-position: center;
     background-size: cover;
   }
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/back-desktop@2x.jpg");
+    background: url("../img/back-desktop@2x.webp");
     background-position: center;
     background-size: cover;
   }
 
   @media (min-resolution: 3dppx) {
-    background: url("../img/back-desktop@3x.jpg");
+    background: url("../img/back-desktop@3x.webp");
     background-position: center;
     background-size: cover;
   }
@@ -238,6 +238,8 @@
 .gallery .item__like {
   display: flex;
   align-items: flex-end;
+  color: var(--black-color);
+  text-decoration: none;
 
   & p {
     margin: 0;
@@ -254,6 +256,10 @@
     @media (min-width: $desktop-width) {
       fill: var(--white-color);
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    color: var(--white-color);
   }
 }
 

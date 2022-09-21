@@ -27,7 +27,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
-    margin: 60px 0;
+    margin: 53px 0;
   }
 }
 
@@ -162,7 +162,7 @@
 .block--1 {
   & .block__content {
     background: var(--blue-color);
-    padding: 33px 15px 40px 15px;
+    padding: 36px 15px 40px 15px;
 
     @media (min-width: $tablet-width) {
       grid-column-start: 1;

@@ -1,7 +1,8 @@
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   /* Браузер сначала попробует найти шрифт локально */
   src: local("PT Sans"),
     url("../fonts/ptsans.woff2") format("woff2"),
@@ -9,9 +10,10 @@
 }
 
 @font-face {
-  font-family: "PT Sans bold";
+  font-family: "PT Sans bold", sans-serif;
   font-style: bold;
   font-weight: bold;
+  font-display: swap;
   /* Браузер сначала попробует найти шрифт локально */
   src: local("PT Sans bold"),
     url("../fonts/ptsansbold.woff2") format("woff2"),

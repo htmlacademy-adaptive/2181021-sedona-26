@@ -5,7 +5,8 @@
 .search-hotel__body {
   @include column();
 
-  padding-bottom: 39px;
+  padding-bottom: 49px;
+  padding-top: 38px;
 
   @media (min-width: $tablet-width) {
     padding: 61px 155px 58px 155px;

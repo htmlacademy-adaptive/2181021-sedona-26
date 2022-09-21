@@ -129,12 +129,19 @@
   align-items: flex-start;
   justify-content: center;
 
-  &--house svg {
-    width: calc(100% - 1px);
+  &--house {
+    width: 40px;
+    height: 38px;
   }
 
-  &--gift svg {
-    width: calc(100% - 8px);
+  &--burger {
+    width: 40px;
+    height: 35px;
+  }
+
+  &--gift {
+    width: 32px;
+    height: 38px;
   }
 
   @media (min-width: $tablet-width) {

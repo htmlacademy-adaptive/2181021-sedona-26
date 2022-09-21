@@ -130,35 +130,15 @@
     color: var(--button);
   }
 
-  &:hover .developer__icon,
-  &--hover .developer__icon {
-    background: var(--button);
-  }
-
   &:active,
   &--active {
     color: var(--button-disable);
-  }
-
-  &:active .developer__icon,
-  &--active .developer__icon {
-    background: var(--button-disable);
   }
 }
 
 .developer__icon {
   width: 50px;
   height: 50px;
-
-  background: var(--black-color);
-  mask-image: url("../img/htmlacademy.svg");
-  // -webkit-mask-image: url("../img/htmlacademy.svg");
-  mask-repeat: no-repeat;
-  // -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  // -webkit-mask-position: center;
-  mask-size: 100% 100%;
-  // -webkit-mask-size: 100% 100%;
 
   &:hover,
   &--hover {

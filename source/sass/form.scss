@@ -348,6 +348,8 @@ label {
     position: relative;
     margin: 0;
 
+    cursor: pointer;
+
     &::before {
       content: "";
       display: block;
@@ -421,6 +423,8 @@ label {
     position: relative;
     margin: 0;
 
+    cursor: pointer;
+
     &::before {
       content: "";
       display: block;
@@ -438,7 +442,8 @@ label {
       width: 16px;
       height: 16px;
       position: absolute;
-      left: 15px;
+      top: 13px;
+      left: 13px;
       z-index: 2;
 
       opacity: 0;

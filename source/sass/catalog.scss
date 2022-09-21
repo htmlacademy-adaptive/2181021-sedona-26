@@ -39,7 +39,8 @@
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
-    min-width: 450px;
+    min-width: 460px;
+    min-height: 80px;
   }
 }
 
@@ -191,6 +192,10 @@
 
   mix-blend-mode: normal;
 
+  &:hover {
+    color: var(--button-hover);
+  }
+
   @media (min-width: $desktop-width) {
     color: var(--white-color);
   }
@@ -248,10 +253,19 @@
     font-weight: 600;
   }
 
+  &:hover {
+    color: (var(--button-hover));
+
+    & .icon-like {
+      fill: var(--button-hover);
+    }
+  }
+
   & .icon-like {
     width: 23px;
     height: 21px;
     fill: rgb(0 0 0 / 30%);
+
 
     @media (min-width: $desktop-width) {
       fill: var(--white-color);
@@ -308,6 +322,7 @@
     height: 56px;
     z-index: 30;
     cursor: pointer;
+    opacity: 0.6;
   }
 
   & .video {
@@ -323,6 +338,7 @@
     z-index: 20;
     cursor: pointer;
     object-fit: cover;
+
 
     @media (min-width: $tablet-width) {
       background: url("../img/catalog/video-desktop.jpg");
@@ -360,7 +376,7 @@
   }
 
   &:hover::after {
-    opacity: 0.6;
+    opacity: 1;
   }
 
   @media (min-width: $tablet-width) {

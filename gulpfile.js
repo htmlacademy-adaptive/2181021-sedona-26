@@ -12,6 +12,7 @@ import svgo from 'gulp-svgmin';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from "gulp-libsquoosh";
+import concat from "gulp-concat";
 
 // Svg sprite
 
@@ -62,8 +63,8 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
+    .pipe(concat('script.min.js'))
     .pipe(terser())
-    .pipe(rename('script.min.js'))
     .pipe(gulp.dest("build/js/"));
 }
 

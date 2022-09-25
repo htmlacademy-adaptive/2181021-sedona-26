@@ -1,0 +1,235 @@
+.gallery {
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 480px 1fr 1fr;
+    gap: 0 0;
+    grid-template-areas:
+      "gallery-item-1 gallery-item-1"
+      "gallery-item-2 gallery-item-3"
+      "gallery-item-4 . ";
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 267px;
+    gap: 0 0;
+    grid-template-areas:
+      "gallery-item-1 gallery-item-1 gallery-item-1"
+      "gallery-item-2 gallery-item-3 gallery-item-4";
+  }
+}
+
+
+.gallery .item__image {
+  width: 100%;
+  overflow: hidden;
+  height: 280px;
+  max-width: 280px;
+  margin: 0 auto;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 267px;
+    max-width: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.gallery__item {
+  padding: 26px 20px;
+  border-top: 1px solid var(--button-disable);
+
+  &:last-child {
+    border-bottom: 1px solid var(--button-disable);
+  }
+
+  & .item__body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &--1 {
+    grid-area: gallery-item-1;
+
+    @media (min-width: $tablet-width) {
+      & .item__image {
+        height: 400px;
+      }
+    }
+  }
+
+  &--2 {
+    grid-area: gallery-item-2;
+  }
+
+  &--3 {
+    grid-area: gallery-item-3;
+
+    & .item__body .item__content {
+      @media (min-width: $tablet-width) {
+        background: #eaeaea;
+      }
+
+      @media (min-width: $desktop-width) {
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    & .item-wrapper {
+      @media (min-width: $desktop-width) {
+        position: relative;
+        bottom: 5px;
+      }
+    }
+  }
+
+  &--4 {
+    grid-area: gallery-item-4;
+
+
+    & .item-wrapper {
+      @media (min-width: $desktop-width) {
+        position: relative;
+        bottom: 5px;
+      }
+    }
+  }
+
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-top: 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+
+.gallery .item__link {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  mix-blend-mode: normal;
+
+  @media (min-width: $desktop-width) {
+    color: var(--white-color);
+  }
+
+  &:hover {
+    color: var(--button);
+  }
+}
+
+.gallery .item__author {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  mix-blend-mode: normal;
+
+  margin: 0 0 15px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.gallery .item__content {
+  margin-top: 14px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 22px 20px 15px 20px;
+    background: var(--input);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--white-color);
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 40px);
+  }
+}
+
+.gallery .item__like {
+  display: flex;
+  align-items: flex-end;
+  color: var(--black-color);
+  text-decoration: none;
+
+  & p {
+    margin: 0 0 0 13px;
+    font-weight: 600;
+    font-size: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 3px 9px;
+    }
+  }
+
+  &:hover {
+    color: var(--button);
+
+    & .icon-like {
+      @media (min-width: $desktop-width) {
+        fill: var(--button);
+      }
+    }
+  }
+
+  & .icon-like {
+    width: 23px;
+    height: 21px;
+    fill: rgba(0, 0, 0, 0.3);
+    bottom: 5px;
+    position: relative;
+
+
+    @media (min-width: $desktop-width) {
+      fill: var(--white-color);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    color: var(--white-color);
+  }
+}

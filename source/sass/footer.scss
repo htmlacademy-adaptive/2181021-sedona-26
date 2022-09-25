@@ -8,7 +8,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 28.5px;
+  padding-top: 11.5px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -18,12 +18,14 @@
   }
 }
 
+
 .hashtag {
-  font-family: "PT Sans bold", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  margin: 0 2px 0 0;
   /* identical to box height, or 124% */
 
   display: flex;
@@ -34,6 +36,14 @@
   color: #000000;
 
   mix-blend-mode: normal;
+
+  @media (min-width: $tablet-width) {
+    margin: 3px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 6px 25px 0 0;
+  }
 }
 
 .footer__social {
@@ -44,16 +54,23 @@
 .social__list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   width: 100%;
-  padding: 0 40px;
+
+  padding: 0 59px 0 63px;
   margin-top: 33.5px;
 
   list-style: none;
 
   @media (min-width: $tablet-width) {
     margin: 36px 0;
+    padding: 0 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 119px 0 119px;
   }
 }
 
@@ -63,6 +80,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 
   &:hover {
     background: var(--button-hover);
@@ -99,8 +117,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   margin: 0 3px;
 
   background: var(--button);
@@ -108,8 +126,8 @@
 
 .footer__developer {
   display: flex;
-  margin-top: 24px;
-  margin-bottom: 13px;
+  margin-top: 18px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
@@ -124,6 +142,11 @@
   color: var(--black-color);
 
   text-decoration: none;
+  font-size: 14px;
+
+  & p {
+    margin-left: 6px;
+  }
 
   &:hover,
   &--hover {
@@ -134,11 +157,23 @@
   &--active {
     color: var(--button-disable);
   }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 4px;
+    margin-top: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 3px;
+    margin-left: 32px;
+  }
 }
 
 .developer__icon {
-  width: 50px;
+  width: 40px;
   height: 50px;
+  margin-left: 6px;
+  margin-top: -2px;
 
   &:hover,
   &--hover {

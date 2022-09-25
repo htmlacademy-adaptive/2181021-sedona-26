@@ -5,7 +5,7 @@
 }
 
 @mixin title {
-  font-family: "PT Sans bold", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 26px;
@@ -22,7 +22,7 @@
 }
 
 @mixin p {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
@@ -55,7 +55,7 @@
 }
 
 @mixin icon($icon-name, $icon-width, $icon-height) {
-  &--#{$icon-name} {
+  &--#{$icon-name} svg {
     width: $icon-width;
     height: $icon-height;
     display: flex;

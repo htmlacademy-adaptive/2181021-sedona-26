@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/script.min.js" async></script>
+    <!-- <script src="js/script.min.js" async></script> -->
+    <script src="js/menu.js"></script>
     <title>HTML Academy: Седона</title>
   </head>
   <body class="catalog-page">
@@ -16,18 +17,21 @@
             <img width="185" height="96" src="img/logo.svg" alt="Логотип">
           </a>
         </div>
-        <div class="menu__item menu__item--home"><a href="/" class="menu__link">Главная</a></div>
-        <div class="menu__item menu__item--catalog"><a href="catalog.html" class="menu__link menu__link--current">Фото и видео</a></div>
+        <div class="menu__item menu__item--home"><a href="/" class="menu__link menu__link--current">Главная</a></div>
+        <div class="menu__item menu__item--catalog"><a href="catalog.html" class="menu__link">Фото и видео</a></div>
         <div class="menu__item menu__item--form"><a href="form.html" class="menu__link">Форма отзыва</a></div>
         <div class="menu__item menu__item--htmlacademy"><a href="https://htmlacademy.ru" class="menu__link">HTML ACADEMY</a></div>
       </div>
-      <div class="menu-mobile">
-        <input type="checkbox" id="menu-button" class="menu-mobile__list--ticker">
-        <label class="menu-mobile__icon" for="menu-button">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-        </label>
+      <div class="menu-mobile menu-mobile--nojs"> <!-- menu-mobile--show  menu-mobile--closed  menu-mobile--nojs-->
+        <button type="button" class="menu-mobile__button" onclick="toggleMenu()">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg class="open-icon">
+            <use href="img/sprite.svg#open-menu"></use>
+          </svg>
+          <svg class="close-icon">
+            <use href="img/sprite.svg#close-menu"></use>
+          </svg>
+        </button>
         <ul class="menu-mobile__list">
           <li class="menu-mobile__item"><a href="/" class="menu-mobile__link">Главная</a></li>
           <li class="menu-mobile__item"><a href="catalog.html" class="menu-mobile__link">Фото и видео</a></li>
@@ -41,7 +45,6 @@
         <div class="slider__background">
           <img width="229" height="39" src="img/SEDONA.svg" class="slider__text" alt="SEDONA">
         </div>
-        <div class="triangle"></div>
         <div class="preview container">
           <h1 class="preview__title title">Фото и видео</h1>
           <p class="preview__p">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
@@ -63,10 +66,10 @@
             </div>
             <div class="item__content">
               <div class="item-wrapper">
-                <a href="#" class="item__link">Неродные просторы</a>
+                <a href="img/catalog/photo-1-desktop@3x.webp" class="item__link">Неродные просторы</a>
                 <p class="item__author">Автор фото: Борис</p>
               </div>
-              <a href="" class="item__like" aria-label="Поставить like">
+              <a href="#" class="item__like" aria-label="Поставить like" target="_blank">
                 <svg class="icon-like" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#icon-like"></use>
                 </svg>
@@ -90,7 +93,7 @@
             </div>
             <div class="item__content">
               <div class="item-wrapper">
-                <a href="#" class="item__link">Местная растительность</a>
+                <a href="img/catalog/photo-2-desktop@3x.webp" class="item__link" target="_blank">Местная растительность</a>
                 <p class="item__author">Автор фото: Сергей</p>
               </div>
               <a href="" class="item__like" aria-label="Поставить like">
@@ -117,10 +120,10 @@
             </div>
             <div class="item__content">
               <div class="item-wrapper">
-                <a href="#" class="item__link">Дорога на север</a>
+                <a href="img/catalog/photo-3-desktop@3x.webp" class="item__link" target="_blank">Дорога на север</a>
                 <p class="item__author">Автор фото: Петр</p>
               </div>
-              <a href="" class="item__like" aria-label="Поставить like">
+              <a href="#" class="item__like" aria-label="Поставить like" >
                 <svg class="icon-like" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#icon-like"></use>
                 </svg>
@@ -134,7 +137,7 @@
             <div class="item__image">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop.webp 1x, img/catalog/photo-4-desktop@2x.webp 2x, img/catalog/photo-4-desktop@3x.webp 3x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/photo-4-tablet.webp 1x, img/catalog/photo-34-tablet@2x.webp 2x, img/catalog/photo-4-tablet@3x.webp 3x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/photo-4-tablet.webp 1x, img/catalog/photo-4-tablet@2x.webp 2x, img/catalog/photo-4-tablet@3x.webp 3x">
                 <source type="image/webp" srcset="img/catalog/photo-4-mobile.webp 1x, img/catalog/photo-4-mobile@2x.webp 2x, img/catalog/photo-4-mobile@3x.webp 3x">
 
                 <source media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x, img/catalog/photo-4-desktop@3x.jpg 3x">
@@ -144,10 +147,10 @@
             </div>
             <div class="item__content">
               <div class="item-wrapper">
-                <a href="#" class="item__link">Мост дьявола</a>
+                <a href="img/catalog/photo-4-desktop.webp" class="item__link" target="_blank">Мост дьявола</a>
                 <p class="item__author">Автор фото: Антон</p>
               </div>
-              <a href="" class="item__like" aria-label="Поставить like">
+              <a href="#" class="item__like" aria-label="Поставить like">
                 <svg class="icon-like" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#icon-like"></use>
                 </svg>
@@ -157,14 +160,16 @@
           </div>
         </div>
       </section>
-      <section class="video-presentation  container">
+      <section class="video-presentation container">
         <div class="preview">
           <h1 class="preview__title title">Все еще сомневаетесь?</h1>
           <p class="preview__p">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
         <div class="videoplayer">
-          <div class="video"></div>
-          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-pjw1_GucsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <button type="button" class="videoplayer__button"></button>
+          <video class="videoplayer_conteiner">
+            Ваш браузер не поддерживает HTML5 video тег.
+          </video>
         </div>
       </section>
     </main>

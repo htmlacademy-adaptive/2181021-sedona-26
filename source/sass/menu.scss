@@ -1,124 +1,109 @@
 .menu-mobile {
   display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.menu-mobile__button {
+  padding: 16px 20px;
+  border: 0;
+  position: relative;
+  z-index: 100;
+  background: transparent;
+}
+
 .menu-mobile__list {
-  display: block;
-
-
-  width: 100%;
-  height: max-content;
-  padding: 0;
-  margin: 0;
-
-
   position: fixed;
-  list-style: none;
-
-  box-sizing: border-box;
-
-  background-color: var(--blue-color);
-
-  top: -300px;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
   left: 0;
-  transition: top 0.2s;
-  z-index: 2;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  list-style: none;
+  background: #81b3d2;
+  height: max-content;
+  margin: 0;
+  padding: 0;
 
-  transform: translateZ(0);
-  backface-visibility: hidden;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.2) 100%);
+    bottom: 0;
+    position: absolute;
+  }
+}
 
-  &--ticker {
+.open-icon {
+  width: 23px;
+  height: 22px;
+}
+
+.close-icon {
+  width: 22px;
+  height: 22px;
+  display: none;
+}
+
+.menu-mobile--nojs {
+  & .menu-mobile__list {
+    transform: translateY(0);
+  }
+
+  & .menu-mobile__button {
+    transform: translateY(0);
+  }
+
+  & .open-icon {
     display: none;
   }
-}
 
-.menu-mobile__icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  width: 25px;
-  height: 25px;
-  padding: 15px;
-  margin: 0;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  transition: left 0.23s;
-  z-index: 3;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  cursor: pointer;
-
-  & .burger-line {
+  & .close-icon {
     display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--blue-color);
-    margin: 5px 0 0;
-    transition: all 0.1s linear 0.23s;
-    position: relative;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  &:hover .burger-line {
-    opacity: 0.6;
-  }
-
-  &:active .burger-line {
-    opacity: 0.3;
   }
 }
 
-.menu-mobile__list--ticker:checked ~ .menu-mobile__list {
-  top: 0;
-}
-
-.menu-mobile__list--ticker:checked ~ .menu-mobile__icon span:first-child {
-  transform: rotate(45deg);
-  top: 8px;
-  background-color: var(--white-color);
-  opacity: 1;
-}
-
-.menu-mobile__list--ticker:checked ~ .menu-mobile__icon span:nth-child(2n) {
-  opacity: 0;
-}
-
-.menu-mobile__list--ticker:checked ~ .menu-mobile__icon span {
-  transform: rotate(-45deg);
-  top: -10px;
-  background-color: var(--white-color);
-  opacity: 1;
-}
-
-.menu-mobile__list--ticker:checked ~ .menu-mobile__icon:hover {
-  & span {
-    opacity: 0.6;
+.menu-mobile--show {
+  & .menu-mobile__list {
+    transform: translateY(0);
   }
 
-  & span:nth-child(2n) {
-    opacity: 0;
+  & .menu-mobile__button {
+    transform: translateY(-224px);
+  }
+
+  & .open-icon {
+    display: none;
+  }
+
+  & .close-icon {
+    display: block;
   }
 }
 
-.menu-mobile__list--ticker:checked ~ .menu-mobile__icon:active {
-  & span {
-    opacity: 0.3;
+.menu-mobile--closed {
+  & .menu-mobile__list {
+    transform: translateY(-230px);
   }
 
-  & span:nth-child(2n) {
-    opacity: 0;
+  & .menu-mobile__button {
+    transform: translateY(0);
+  }
+
+  & .open-icon {
+    display: block;
+  }
+
+  & .close-icon {
+    display: none;
   }
 }
 
@@ -130,22 +115,16 @@
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
   & .menu-mobile__link {
-    font-family: "PT Sans bold", sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 18px;
+    font-weight: 700;
     line-height: 26px;
     text-transform: uppercase;
     text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     width: 100%;
     height: 100%;
-    padding: 17px 10px 12px 10px;
-
+    padding: 18px 10px 12px 10px;
     color: var(--white-color);
-
     mix-blend-mode: normal;
     text-decoration: none;
     list-style-type: none;
@@ -180,13 +159,29 @@
   @include menu__item(form);
   @include menu__item(htmlacademy);
 
+  &--home {
+    margin: 2px 0 0 3px;
+  }
+
+  &--catalog {
+    margin: 2px 0 0 2px;
+  }
+
+  &--form {
+    margin: 2px 0 0 0;
+  }
+
+  &--htmlacademy {
+    margin: 2px 1px 0 0;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     justify-content: center;
 
     & .menu__link {
-      font-family: "PT Sans bold", sans-serif;
+      font-family: "PT Sans", "Tahoma", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 14px;

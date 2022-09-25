@@ -63,7 +63,7 @@ const html = () => {
 const scripts = () => {
   return gulp.src("source/js/*.js")
     .pipe(terser())
-    .pipe(rename('script.min.js'))
+    // .pipe(rename('script.min.js'))
     .pipe(gulp.dest("build/js/"));
 }
 
@@ -151,7 +151,7 @@ export const build = gulp.series(
 
 export default gulp.series(
   clean,
-  // optimazeImages,
+  optimazeImages,
   copyImages,
   copyFiles,
   createWebp,

@@ -6,42 +6,36 @@ html {
 
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 16px;
   margin: 0 auto;
   padding: 0;
+  transition: 0.2s;
+}
+
+header {
+  transition: 0.2s;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 button {
   cursor: pointer;
-}
 
-.index-page .main-content {
-  counter-reset: desc-counter;
-}
-
-.index-page .title {
-  @media (min-width: $tablet-width) {
-    font-size: 21px;
-    padding: 0 10px;
-  }
-
-
-  &--item {
-    text-align: left;
-    padding: 8px;
-
-    @media (min-width: $tablet-width) {
-      padding-bottom: 21px;
-    }
-  }
-
-  &--white {
-    color: var(--white-color);
-
-    @media (min-width: $desktop-width) {
-      padding: 0 30px;
-    }
+  &:focus {
+    outline: 2px solid #333333;
+    border-radius: 2px;
   }
 }
 
@@ -61,8 +55,9 @@ button {
   @include title();
 
   &--index {
-    margin: 0 0 35px 0;
-    padding: 0;
+    margin: 33px 0 35px;
+    padding: 0 8px 0 4px;
+    line-height: 27px;
 
     @media (min-width: $tablet-width) {
       margin: 0 0 30px;
@@ -85,6 +80,14 @@ button {
   color: #333333;
   margin: 0;
 
+  & br {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     text-align: center;
     margin: 0;
@@ -92,10 +95,15 @@ button {
 
   &--white {
     color: var(--white-color);
+    margin: 0 6px 0 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 -4px 0 -4px;
+    }
   }
 }
 
-.desc__number {
+.content__number {
   margin: 11px 0 17px 0;
   counter-increment: desc-counter;
 
@@ -115,4 +123,90 @@ button {
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+}
+
+
+input,
+textarea {
+  height: 27px;
+  padding: 16px;
+
+  background: var(--input);
+  border: 0;
+
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+
+  &:hover {
+    background: var(--button-disable);
+  }
+
+  &:focus {
+    background: var(--white-color);
+    outline: 4px solid var(--input);
+    outline-offset: -4px;
+
+    & ~ .contacts-button {
+      border: 4px solid var(--input);
+      border-left: 0;
+    }
+  }
+
+  &::placeholder {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+
+    display: flex;
+    align-items: center;
+
+    color: rgb(#000000, 30%);
+
+    mix-blend-mode: normal;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  &[type="tel"],
+  &[type="email"] {
+    width: calc(100% - 86px);
+  }
+
+  &[type="textarea"] {
+    min-height: 150px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #00000030;
+      vertical-align: top;
+    }
+  }
+}
+
+label {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #333333;
+
+  mix-blend-mode: normal;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin-left: 16px;
 }

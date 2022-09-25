@@ -1,0 +1,25 @@
+.form__block-2 {
+  @include form-blocks();
+
+  & .form__input-wrapper:last-child {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 77px;
+  }
+
+  & .form__title {
+    @media (min-width: $tablet-width) {
+      margin-left: -40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -63px;
+    }
+  }
+}

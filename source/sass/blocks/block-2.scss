@@ -1,4 +1,4 @@
-.block--2 {
+.block-2 {
   & picture {
     width: 100%;
     position: relative;
@@ -18,22 +18,23 @@
     height: 100%;
   }
 
-  & .block__content {
+  & .block-2__content {
     background: var(--blue-color);
     padding: 39px 15px 28px 15px;
+    justify-content: center;
 
     @media (min-width: $tablet-width) {
-      padding: 42px 40px 28px;
+      padding: 32px 30px 28px;
       min-height: 186px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 50px 90px 28px;
+      padding: 50px 45px 28px;
       min-height: 178px;
     }
   }
 
-  & .block__wrapper {
+  & .block-2__wrapper {
     @include block-wrapper();
 
     @media (min-width: $tablet-width) {
@@ -42,20 +43,38 @@
     }
   }
 
-  & .title--white {
-    margin: 1px 0 0 -2px;
+  & .block-2__title {
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+    }
+
+    &--white {
+      margin: 1px 2px 0 0;
+    }
   }
 
-  & .desc--white {
+  & .block-2__desc {
     margin: 0 1px 6px 0;
+
+    &--white {
+      color: var(--white-color);
+    }
 
     @media (min-width: $tablet-width) {
       margin: 5px 1px 6px 0;
     }
+
+    @media (min-width: $desktop-width) {
+      margin: 6px 40px 6px 40px;
+    }
   }
 
-  & .content__number {
+  & .block-2__number {
     margin: 11px 2px 17px 0;
+
+    &--white {
+      color: var(--white-color);
+    }
 
     @media (min-width: $tablet-width) {
       margin: 13px 2px 17px 0;

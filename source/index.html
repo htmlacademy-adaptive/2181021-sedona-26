@@ -31,10 +31,10 @@
       <div class="menu-mobile menu-mobile--nojs"> <!-- menu-mobile--show  menu-mobile--closed  menu-mobile--nojs-->
         <button type="button" class="menu-mobile__button" onclick="toggleMenu()">
           <span class="visually-hidden">Открыть меню</span>
-          <svg class="open-icon">
+          <svg class="menu-mobile__open-icon">
             <use href="img/sprite.svg#open-menu"></use>
           </svg>
-          <svg class="close-icon">
+          <svg class="menu-mobile__close-icon">
             <use href="img/sprite.svg#close-menu"></use>
           </svg>
         </button>
@@ -53,21 +53,20 @@
             <use href="img/sprite.svg#text-index"></use>
           </svg>
         </div>
-        <!-- <div class="triangle"></div> -->
         <div class="container">
-          <div class="preview">
-            <h1 class="title title--index">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
-            <p class="desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <div class="preview index-preview">
+            <h1 class="preview__title title index-preview__title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
+            <p class="desc preview__desc index-preview__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
         </div>
       </section>
       <section class="main-content">
-        <div class="block block--1">
-          <div class="block__wrapper">
-            <div class="block__content content">
-              <h3 class="title title--white">НАСТОЯЩИЙ ГОРОДОК</h3>
-              <p class="desc desc--white content__number"></p> <!-- Счётчик в css -->
-              <p class="desc desc--white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+        <div class="block block-1">
+          <div class="block__wrapper block-1__wrapper">
+            <div class="block__content block-1__content">
+              <h3 class="block__title title block-1__title block-1__title--white">НАСТОЯЩИЙ ГОРОДОК</h3>
+              <p class="block__number block-1__number block-1__number--white"></p> <!-- Счётчик в css -->
+              <p class="block__desc desc block-1__desc block-1__desc--white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/home/photo-city__desktop.jpg, img/home/photo-city__desktop@2x.webp 2x, img/home/photo-city__desktop@3x.webp 3x" width="100%" height="256">
@@ -79,48 +78,48 @@
               <img src="img/home/photo-city__mobile.jpg" srcset="img/home/photo-city__mobile@2x.jpg 2x, img/home/photo-city__mobile@3x.jpg 3x" width="100%" height="256">
             </picture>
           </div>
-          <div class="block__list container">
-            <div class="block__item item">
-              <div class="item__icon item__icon--house">
+          <div class="block__list  block-1__list container">
+            <div class="block__item block-1__item">
+              <div class="block__icon block__icon--house block-1__icon">
                 <svg aria-label="Жилье" focusable="false">
                   <use href="img/sprite.svg#icon-house"></use>
                 </svg>
               </div>
-              <div class="item__content">
-                <h3 class="title title--item">Жилье</h3>
-                <p class="desc item__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <div class="block__item-content block-1__item-content">
+                <h3 class="block__item-title title block-1__item-title">Жилье</h3>
+                <p class="block__item-desc desc block-1__item-desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </div>
             </div>
-            <div class="block__item item">
-              <div class="item__icon item__icon--burger">
+            <div class="block__item block-1__item">
+              <div class="block__icon block__icon--burger block-1__icon">
                 <svg aria-label="Еда" focusable="false">
                   <use href="img/sprite.svg#icon-burger"></use>
                 </svg>
               </div>
-              <div class="item__content">
-                <h3 class="title title--item">Еда</h3>
-                <p class="desc item__desc">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы&nbsp;не&nbsp;разочаруетесь!</p>
+              <div class="block__item-content block-1__item-content">
+                <h3 class="block__item-title title block-1__item-title">Еда</h3>
+                <p class="block__item-desc desc block-1__item-desc">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы&nbsp;не&nbsp;разочаруетесь!</p>
               </div>
             </div>
-            <div class="block__item item">
-              <div class="item__icon item__icon--gift">
+            <div class="block__item block-1__item">
+              <div class="block__icon block__icon--gift block-1__icon">
                 <svg aria-label="Сувениры" focusable="false">
                   <use href="img/sprite.svg#icon-gift"></use>
                 </svg>
               </div>
-              <div class="item__content">
-                <h3 class="title title--item">Сувениры</h3>
-                <p class="desc item__desc">Не  только  китайского,<br> но и местного производства!</p>
+              <div class="block__item-content block-1__item-content">
+                <h3 class="block__item-title title block-1__item-title">Сувениры</h3>
+                <p class="block__item-desc desc block-1__item-desc">Не  только  китайского,&nbsp;<br> но и местного производства!</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="block block--2">
-          <div class="block__wrapper">
-            <div class="block__content content">
-              <h3 class="title title--white">ТАМ ЕСТЬ МОСТ&nbsp;ДЬЯВОЛА</h3>
-              <p class="desc desc--white content__number"></p><!-- Счётчик в css -->
-              <p class="desc desc--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        <div class="block block-2">
+          <div class="block__wrapper block-2__wrapper">
+            <div class="block__content block-2__content">
+              <h3 class="block__title title block-2__title block-2__title--white">ТАМ ЕСТЬ МОСТ&nbsp;ДЬЯВОЛА</h3>
+              <p class="block__number block-2__number block-2__number--white"></p><!-- Счётчик в css -->
+              <p class="block__desc desc block-2__desc block-2__desc--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/home/photo-bridge__desktop.jpg, img/home/photo-bridge__desktop@2x.webp 2x, img/home/photo-bridge__desktop@3x.webp 3x" width="100%" height="256">
@@ -133,31 +132,31 @@
             </picture>
           </div>
         </div>
-        <div class="block-group container">
-          <div class="block block--3">
-            <div class="block__wrapper">
-              <div class="block__content  content">
-                <h3 class="title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
-                <p class="desc content__number"></p> <!-- Счётчик в css -->
-                <p class="desc">Все интересные места находятся очень близко</p>
+        <div class="main-content__group container">
+          <div class="block block-3">
+            <div class="block__wrapper block-3__wrapper">
+              <div class="block__content block-3__content">
+                <h3 class="block__title title block-3__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+                <p class="block__number block-3__number"></p> <!-- Счётчик в css -->
+                <p class="block__desc desc block-3__desc">Все интересные места находятся очень близко</p>
               </div>
             </div>
           </div>
-          <div class="block block--4">
-            <div class="block__wrapper">
-              <div class="block__content  content">
-                <h3 class="title">КРАСИВАЯ ДОРОГА</h3>
-                <p class="desc content__number"></p> <!-- Счётчик в css -->
-                <p class="desc">Ехать в СЕДОНУ из ЛАС&#8209;ВЕГАСА совсем не&nbsp;скучно!</p>
+          <div class="block block-4">
+            <div class="block__wrapper block-4__wrapper">
+              <div class="block__content block-4__content">
+                <h3 class="block__title title block-4__title">КРАСИВАЯ ДОРОГА</h3>
+                <p class="block__number block-4__number"></p> <!-- Счётчик в css -->
+                <p class="block__desc desc block-4__desc">Ехать в СЕДОНУ из ЛАС&#8209;ВЕГАСА совсем не&nbsp;скучно!</p>
               </div>
             </div>
           </div>
-          <div class="block block--5">
-            <div class="block__wrapper">
-              <div class="block__content  content">
-                <h3 class="title">МАЛО ТУРИСТОВ</h3>
-                <p class="desc content__number"></p> <!-- Счётчик в css -->
-                <p class="desc">Большинство едет в гранд каньон и толпится там</p>
+          <div class="block block-5">
+            <div class="block__wrapper block-5__wrapper">
+              <div class="block__content block-5__content">
+                <h3 class="block__title title block-5__title">МАЛО ТУРИСТОВ</h3>
+                <p class="block__number block-5__number"></p> <!-- Счётчик в css -->
+                <p class="block__desc desc block-5__desc">Большинство едет в гранд каньон и толпится там</p>
               </div>
             </div>
           </div>
@@ -165,9 +164,9 @@
       </section>
       <section class="search-hotel">
         <div class="search-hotel__body container">
-          <h2 class="search-hotel__title">Заинтересовались?</h2>
-          <p class="search-hotel__p">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
-          <button type="button" onclick="location.href = '/example/'" class="button search-hotel__button">Найти гостиницу</button>
+          <h2 class="search-hotel__title title">Заинтересовались?</h2>
+          <p class="search-hotel__desc">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
+          <a href="search.html" class="button search-hotel__button">Найти гостиницу</a>
         </div>
         <div class="search-hotel__map map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839783.212294631!2d-112.39834729705507!3d34.25007857947784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1662735131544!5m2!1sru!2sru" width="400" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -175,29 +174,29 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__body container">
+      <div class="footer__body footer__body--index container">
         <div class="footer__hashtag">
-          <span class="hashtag">#visitSEDONA</span>
+          <span class="footer__hashtag-text">#visitSEDONA</span>
         </div>
         <div class="footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="https://vk.com" class="social__link">
-                <svg class="social__icon social__icon--vk" aria-label="Вконтакте" focusable="false">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a href="https://vk.com" class="footer__social-link">
+                <svg class="footer__social-icon footer__social-icon--vk" aria-label="Вконтакте" focusable="false">
                   <use href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon social__icon--telegram" aria-label="Телеграмм" focusable="false">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-icon footer__social-icon--telegram" aria-label="Телеграмм" focusable="false">
                   <use href="img/sprite.svg#icon-telegram"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon social__icon--youtube" aria-label="Ютуб" focusable="false">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-icon footer__social-icon--youtube" aria-label="Ютуб" focusable="false">
                   <use href="img/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
@@ -205,9 +204,9 @@
           </ul>
         </div>
         <div class="footer__developer developer">
-          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="developer__link" aria-label="Сайт Htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="footer__developer-link" aria-label="Сайт Htmlacademy">
             <p>РАЗРАБОТАНО</p>
-            <svg class="developer__icon" >
+            <svg class="footer__developer-icon" >
               <use href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>

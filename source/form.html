@@ -28,10 +28,10 @@
       <div class="menu-mobile menu-mobile--nojs"> <!-- menu-mobile--show  menu-mobile--closed  menu-mobile--nojs-->
         <button type="button" class="menu-mobile__button" onclick="toggleMenu()">
           <span class="visually-hidden">Открыть меню</span>
-          <svg class="open-icon">
+          <svg class="menu-mobile__open-icon">
             <use href="img/sprite.svg#open-menu"></use>
           </svg>
-          <svg class="close-icon">
+          <svg class="menu-mobile__close-icon">
             <use href="img/sprite.svg#close-menu"></use>
           </svg>
         </button>
@@ -48,9 +48,9 @@
         <div class="slider__background">
           <img width="229" height="39" src="img/SEDONA.svg" class="slider__text" alt="SEDONA">
         </div>
-        <div class="preview container">
-          <h1 class="preview__title title">Оставьте свой отзыв</h1>
-          <p class="preview__p">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
+        <div class="preview form-preview container">
+          <h1 class="preview__title title form-preview__title">Оставьте свой отзыв</h1>
+          <p class="preview__desc form-preview__desc">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
         </div>
       </section>
       <div id="modal-fail" class="modal">
@@ -109,9 +109,9 @@
             <div class="form__section">
               <div class="form__input-wrapper">
                 <label for="phone">Контактный телефон*:</label>
-                <div class="tel-input">
+                <div class="form__phone-input">
                   <input name="phone" id="phone" placeholder="Введите телефон" type="tel">
-                  <button class="contacts-button contacts-button__icon--tel" aria-label="Кнопка отправки телефона">
+                  <button class="form__contacts-button form__contacts-button--tel" aria-label="Кнопка отправки телефона">
                     <svg aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#icon-phone"></use>
                     </svg>
@@ -120,9 +120,9 @@
               </div>
               <div class="form__input-wrapper">
                 <label for="mail">Электронная почта*:</label>
-                <div class="tel-input">
+                <div class="form__phone-input">
                   <input name="mail" id="mail" placeholder="Введите e-mail" type="email">
-                  <button class="button contacts-button contacts-button__icon--mail" aria-label="Кнопка отправки почты">
+                  <button class="button form__contacts-button form__contacts-button--mail" aria-label="Кнопка отправки почты">
                     <svg aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#icon-mail"></use>
                     </svg>
@@ -186,9 +186,9 @@
             <div class="form__section">
               <div class="form__textarea-wrapper">
                 <textarea id="message" name="message" placeholder="Опишите подробно все свои восторги" type="textarea"></textarea>
-                <div class="button-wrapper">
-                  <button type="button" class="button form__button" onclick="openFail()">ОТПРАВИТЬ ОТЗЫВ</button>
-                  <span class="required-field">* — обязательные поля</span>
+                <div class="form__button-wrapper">
+                  <button type="submit" class="button form__button" onclick="openSucces()">ОТПРАВИТЬ ОТЗЫВ</button>
+                  <span class="form__required-field">* — обязательные поля</span>
                 </div>
               </div>
             </div>
@@ -199,27 +199,27 @@
     <footer class="footer">
       <div class="footer__body container">
         <div class="footer__hashtag">
-          <span class="hashtag">#visitSEDONA</span>
+          <span class="footer__hashtag-text">#visitSEDONA</span>
         </div>
         <div class="footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="https://vk.com" class="social__link">
-                <svg class="social__icon social__icon--vk" aria-label="Вконтакте" focusable="false">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a href="https://vk.com" class="footer__social-link">
+                <svg class="footer__social-icon footer__social-icon--vk" aria-label="Вконтакте" focusable="false">
                   <use href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon social__icon--telegram" aria-label="Телеграмм" focusable="false">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-icon footer__social-icon--telegram" aria-label="Телеграмм" focusable="false">
                   <use href="img/sprite.svg#icon-telegram"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon social__icon--youtube" aria-label="Ютуб" focusable="false">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-icon footer__social-icon--youtube" aria-label="Ютуб" focusable="false">
                   <use href="img/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
@@ -227,9 +227,9 @@
           </ul>
         </div>
         <div class="footer__developer developer">
-          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="developer__link" aria-label="Сайт Htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="footer__developer-link" aria-label="Сайт Htmlacademy">
             <p>РАЗРАБОТАНО</p>
-            <svg class="developer__icon" >
+            <svg class="footer__developer-icon" >
               <use href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>

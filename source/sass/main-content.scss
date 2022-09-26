@@ -1,0 +1,35 @@
+.main-content {
+  counter-reset: desc-counter;
+
+  &::before {
+    content: "";
+    position: relative;
+    display: flex;
+
+    clip-path: polygon(50% 100%, 100% 0%, 100% 100%, 0 100%, 0% 0%);
+    background: var(--blue-color);
+    height: 15px;
+    top: 1px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__group {
+    background: var(--grey-color);
+    padding: 26px 18px 26px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0;
+      min-height: 256px;
+      margin-top: -5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+}

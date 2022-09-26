@@ -1,0 +1,28 @@
+.desc {
+  @include p();
+
+  color: #333333;
+  margin: 0;
+
+  & br {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    margin: 0;
+  }
+
+  &--white {
+    color: var(--white-color);
+    margin: 0 6px 0 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 -4px 0 -4px;
+    }
+  }
+}

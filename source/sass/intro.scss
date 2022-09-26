@@ -1,0 +1,85 @@
+.intro__background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  min-height: 389px;
+
+  background: #5899c1 url("../img/back-mobile.webp");
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: normal;
+
+  & svg {
+    margin-top: 90px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 83px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: relative;
+    display: flex;
+    height: 35px;
+    width: 100%;
+    background: #ffffff;
+    clip-path: polygon(50% 100%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+    top: 1px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      display: flex;
+      height: 57px;
+      background: #ffffff;
+      clip-path: polygon(50% 100%, 95.5% 0, 95.5% 40%, 100% 35%, 100% 100%, 100% 100%, 0 100%, 0 35%, 4.5% 40%, 4.5% 0);
+      top: 1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      clip-path: polygon(50% 100%, 79.2% 0, 79.2% 40%, 100% 0%, 100% 100%, 100% 100%, 0 100%, 0 0%, 20.9% 40%, 20.9% 0);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 518px;
+    background: #5899c1 url("../img/back-desktop.webp");
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background: #5899c1 url("../img/back-mobile@2x.webp");
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
+    background: #5899c1 url("../img/back-desktop@2x.webp");
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 3dppx) {
+    background: #5899c1 url("../img/back-desktop@3x.webp");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.intro__background-text {
+  @media (min-width: $tablet-width) {
+    min-width: 460px;
+  }
+}
+
+.intro__text-index {
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    height: 350px;
+    position: relative;
+    top: -6px;
+  }
+}

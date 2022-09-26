@@ -1,0 +1,39 @@
+.index-preview {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin: 47.5px auto 55px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 59px auto 44px auto;
+  }
+}
+
+.index-preview__title {
+  margin: 34px 5px 35px 0;
+  padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin: 0 4px 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 1px 0 30px 0;
+  }
+}
+
+.index-preview__desc {
+  text-align: center;
+  margin-right: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 3px;
+    margin-top: -1px;
+  }
+}

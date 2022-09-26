@@ -1,15 +1,12 @@
-.block--3 {
-  & .block__content {
+.block-5 {
+  & .block-5__content {
     @include block-content();
     background: var(--grey-color);
 
-    padding: 0 15px 24px 15px;
+    padding: 24px 15px 0 15px;
 
 
-    border-bottom: 2px solid #d6d6d6;
-
-    & > .content__title,
-    & > .content__p {
+    & > .block-5__title {
       color: var(--black-color);
     }
 
@@ -21,11 +18,11 @@
 
     @media (min-width: $desktop-width) {
       padding: 0 50px;
-      margin: 43px 0 62px 0;
+      margin: 38px 0 62px 0;
     }
   }
 
-  & .block__wrapper {
+  & .block-5__wrapper {
     @include block-wrapper();
 
     @media (min-width: $tablet-width) {
@@ -33,15 +30,15 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
-
-  & .title {
+  & .block-5__title {
     margin: 1px 0 0 0;
 
     @media (min-width: $desktop-width) {
       padding: 0 80px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 }

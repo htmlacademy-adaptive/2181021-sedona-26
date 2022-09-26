@@ -1,5 +1,5 @@
-.block--4 {
-  & .block__wrapper {
+.block-4 {
+  & .block-4__wrapper {
     @include block-wrapper();
 
     @media (min-width: $tablet-width) {
@@ -7,7 +7,7 @@
     }
   }
 
-  & .block__content {
+  & .block-4__content {
     @include block-content();
     background: var(--grey-color);
 
@@ -16,8 +16,7 @@
 
     border-bottom: 2px solid #d6d6d6;
 
-    & > .content__title,
-    & > .content__p {
+    & > .block-4__title {
       color: var(--black-color);
     }
 
@@ -29,15 +28,11 @@
 
     @media (min-width: $desktop-width) {
       padding: 0 50px;
-      margin: 43px 0 62px 0;
+      margin: 38px 0 62px 0;
     }
   }
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
-
-  & .title {
+  & .block-4__title {
     margin: -2px 0 0 0;
 
     @media (min-width: $tablet-width) {
@@ -49,9 +44,15 @@
     }
   }
 
-  & .desc:not(.content__number) {
+  & .block__desc:not(.block__number) {
+    margin-right: 3px;
+
     @media (min-width: $tablet-width) {
       margin: 0 0 0 -4px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 }

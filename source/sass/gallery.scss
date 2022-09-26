@@ -26,13 +26,13 @@
   }
 }
 
-
-.gallery .item__image {
+.gallery__image {
   width: 100%;
   overflow: hidden;
   height: 280px;
   max-width: 280px;
   margin: 0 auto;
+  position: relative;
 
   & img {
     width: 100%;
@@ -52,6 +52,12 @@
   }
 }
 
+.gallery__image-link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .gallery__item {
   padding: 26px 20px;
   border-top: 1px solid var(--button-disable);
@@ -60,7 +66,7 @@
     border-bottom: 1px solid var(--button-disable);
   }
 
-  & .item__body {
+  & .gallery__body {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -70,7 +76,7 @@
     grid-area: gallery-item-1;
 
     @media (min-width: $tablet-width) {
-      & .item__image {
+      & .gallery__image {
         height: 400px;
       }
     }
@@ -83,7 +89,7 @@
   &--3 {
     grid-area: gallery-item-3;
 
-    & .item__body .item__content {
+    & .gallery__body .gallery__content {
       @media (min-width: $tablet-width) {
         background: #eaeaea;
       }
@@ -93,7 +99,7 @@
       }
     }
 
-    & .item-wrapper {
+    & .gallery__wrapper {
       @media (min-width: $desktop-width) {
         position: relative;
         bottom: 5px;
@@ -105,7 +111,7 @@
     grid-area: gallery-item-4;
 
 
-    & .item-wrapper {
+    & .gallery__wrapper {
       @media (min-width: $desktop-width) {
         position: relative;
         bottom: 5px;
@@ -124,8 +130,7 @@
   }
 }
 
-
-.gallery .item__link {
+.gallery__link {
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -150,7 +155,7 @@
   }
 }
 
-.gallery .item__author {
+.gallery__author {
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -169,16 +174,19 @@
   }
 }
 
-.gallery .item__content {
+.gallery__content {
   margin-top: 14px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
-    padding: 22px 20px 15px 20px;
     background: var(--input);
+    align-items: center;
+    padding: 23px 20px 15px 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -190,7 +198,7 @@
   }
 }
 
-.gallery .item__like {
+.gallery__like {
   display: flex;
   align-items: flex-end;
   color: var(--black-color);
@@ -209,14 +217,14 @@
   &:hover {
     color: var(--button);
 
-    & .icon-like {
+    & .gallery__icon {
       @media (min-width: $desktop-width) {
         fill: var(--button);
       }
     }
   }
 
-  & .icon-like {
+  & .gallery__icon {
     width: 23px;
     height: 21px;
     fill: rgba(0, 0, 0, 0.3);

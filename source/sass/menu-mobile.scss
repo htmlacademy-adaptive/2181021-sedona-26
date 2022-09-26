@@ -1,0 +1,140 @@
+.menu-mobile {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.menu-mobile--nojs {
+  & .menu-mobile__list {
+    transform: translateY(0);
+  }
+
+  & .menu-mobile__button {
+    transform: translateY(0);
+  }
+
+  & .menu-mobile__open-icon {
+    display: none;
+  }
+
+  & .menu-mobile__close-icon {
+    display: block;
+  }
+}
+
+.menu-mobile--show {
+  & .menu-mobile__list {
+    transform: translateY(0);
+  }
+
+  & .menu-mobile__button {
+    transform: translateY(-224px);
+  }
+
+  & .menu-mobile__open-icon {
+    display: none;
+  }
+
+  & .menu-mobile__close-icon {
+    display: block;
+  }
+}
+
+.menu-mobile--closed {
+  & .menu-mobile__list {
+    transform: translateY(-230px);
+  }
+
+  & .menu-mobile__button {
+    transform: translateY(0);
+  }
+
+  & .menu-mobile__open-icon {
+    display: block;
+  }
+
+  & .menu-mobile__close-icon {
+    display: none;
+  }
+}
+
+.menu-mobile__button {
+  padding: 16px 20px;
+  border: 0;
+  position: relative;
+  z-index: 100;
+  background: transparent;
+}
+
+.menu-mobile__list {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  list-style: none;
+  background: #81b3d2;
+  height: max-content;
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.2) 100%);
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+.menu-mobile__open-icon {
+  width: 23px;
+  height: 22px;
+}
+
+.menu-mobile__close-icon {
+  width: 22px;
+  height: 22px;
+  display: none;
+}
+
+.menu-mobile__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  & .menu-mobile__link {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 18px 10px 12px 10px;
+    color: var(--white-color);
+    mix-blend-mode: normal;
+    text-decoration: none;
+    list-style-type: none;
+
+    &:active {
+      color: rgb(#ffffff, 30%);
+    }
+  }
+
+  &:hover {
+    background: #669ec0;
+  }
+}

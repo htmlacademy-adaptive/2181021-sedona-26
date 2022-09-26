@@ -1,0 +1,37 @@
+.form-preview {
+  margin-bottom: 28px;
+  margin-top: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 64px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 114px;
+    margin-bottom: 45px;
+  }
+}
+
+.form-preview__desc {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 3px;
+    margin-top: -4px;
+    line-height: 24px;
+  }
+}
+
+.form-preview__title {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
+    margin-right: 3px;
+  }
+}

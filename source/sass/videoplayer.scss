@@ -1,10 +1,10 @@
-.video-presentation .preview {
+.videoplayer .videoplayer__preview {
   margin-top: 17px;
   margin-left: 1px;
 
   @media (min-width: $tablet-width) {
     padding: 41px 80px 90px 80px;
-    margin: 17px auto 0 auto;
+    margin: 15px auto 0 auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -13,12 +13,13 @@
   }
 }
 
-.video-presentation .preview__title {
+.videoplayer .videoplayer__title {
   margin: 0;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 8px;
     margin-right: 2px;
+    font-size: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,9 +28,9 @@
   }
 }
 
-.video-presentation .preview__p {
+.videoplayer .videoplayer__desc {
   margin-top: 26.5px;
-  margin-bottom: 2px;
+  margin-bottom: 38px;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
@@ -41,7 +42,6 @@
     padding: 0 30px;
   }
 }
-
 
 .videoplayer__button {
   width: 80px;
@@ -74,14 +74,14 @@
   }
 }
 
-.videoplayer {
+.videoplayer__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.videoplayer_conteiner {
+.videoplayer__conteiner {
   width: calc(100% - 4px);
   background: url("../../img/catalog/video-mobile.webp");
   background-size: cover;

@@ -1,0 +1,22 @@
+.title {
+  @include title();
+
+  &--index {
+    margin: 33px 0 35px;
+    padding: 0 8px 0 4px;
+    line-height: 27px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &--item {
+    text-align: left;
+    padding: 8px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 21px;
+    }
+  }
+}

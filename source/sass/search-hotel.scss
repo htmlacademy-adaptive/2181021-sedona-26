@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 59px 371px 66px;
+    padding: 54px 371px 66px;
   }
 }
 
@@ -36,7 +36,7 @@
   }
 }
 
-.search-hotel__p {
+.search-hotel__desc {
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -58,44 +58,30 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 35px 0 50px;
+    margin: 38px 0 48px;
   }
 }
 
-.button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 58px;
-  width: 100%;
-  padding: 10px;
-
-  background: var(--button);
-  color: var(--white-color);
-  border: 0;
-  outline: 0;
-
-  @include font-style();
-  font-family: "PT Sans", "Tahoma", sans-serif;
+.search-hotel__button {
+  font-style: normal;
   font-weight: 700;
+  font-size: 21px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: calc(100% - 20px);
+  padding: 16px 10px 15px 10px;
+  min-height: max-content;
 
-  &:hover,
-  &:focus {
-    background: var(--button-hover);
+  @media (min-width: $tablet-width) {
+    padding: 14px 10px 17px;
   }
 
-
-  &:active,
-  &--active {
-    background: var(--button-active);
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  &:disabled,
-  &--disabled {
-    background: var(--button-disable);
+  @media (min-width: $desktop-width) {
+    padding: 13px 10px 17px;
   }
 }
 

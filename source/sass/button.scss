@@ -1,0 +1,39 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 58px;
+  width: 100%;
+  padding: 10px;
+
+  background: var(--button);
+  color: var(--white-color);
+  border: 0;
+  outline: 0;
+
+  @include font-style();
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    background: var(--button-hover);
+  }
+
+  &:focus {
+    outline: 2px solid #000000;
+  }
+
+  &:active,
+  &--active {
+    background: var(--button-active);
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled,
+  &--disabled {
+    background: var(--button-disable);
+  }
+}

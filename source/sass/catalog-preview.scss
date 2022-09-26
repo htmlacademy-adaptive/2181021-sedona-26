@@ -1,0 +1,30 @@
+.catalog-preview {
+  margin-bottom: 36px;
+  margin-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 81px;
+    margin-top: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 99px;
+    margin-bottom: 89px;
+  }
+}
+
+.catalog-preview__title {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.catalog-preview__desc {
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 22px;
+  }
+}
